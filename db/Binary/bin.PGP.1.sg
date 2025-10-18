@@ -1,10 +1,11 @@
 // Detect It Easy: detection rule file
 // Author: BJNFNE <bjnfne@web.de>
 
-meta("audio", "PAT");
+// https://www.gnupg.org/
+meta("format", "GPG");
 
 function detect() {
-    if (Binary.compare("'PT'")) {
+    if (Binary.compare("2d2d2d2d2d424547494e20'PGP'205349474e41545552452d2d2d2d2d")) {
         bDetected = true;
     }
 
