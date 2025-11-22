@@ -29,6 +29,11 @@ private rule IsRichSignPresent {
     condition: for any i in (0x40..0x400) : (@rich_pe == i)
 }
 
+rule Linker__Microsoft_Linker {
+    condition:
+        IsRichSignPresent
+}
+
 rule Compiler__NET_Native__debug {
     condition:
         IsPE and
@@ -56,6 +61,16 @@ rule Library__Qt_Framework {
         IsPE and
         IsNative and
         $core_module_name and $qstring
+}
+
+rule Tool__XVolkolak {
+    condition:
+        IsPE and
+        IsNative and (
+            for any i in (0..pe.number_of_sections - 1) : (
+                pe.sections[i].name == ".xvlk"
+            )
+        )
 }
 
 rule Packer__UPX {
@@ -157,7 +172,6 @@ rule Protector__SecuROM {
         IsPE and
         IsNative and
         pe.sections[pe.number_of_sections - 1].name == ".securom"
-
 }
 
 rule Protection__obfus_h {

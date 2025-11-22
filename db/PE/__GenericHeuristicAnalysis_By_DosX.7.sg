@@ -1,69 +1,69 @@
 // Detect It Easy: detection rule file
 
 /*
-             ██████╗ ███████╗███╗   ██╗███████╗██████╗ ██╗ ██████╗
-            ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██║██╔════╝
-            ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝██║██║
-            ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██║██║
-            ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║╚██████╗
-             ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝
-  ██╗    ██╗  ██╗███████╗██╗   ██╗██████╗ ██╗███████╗████████╗██╗ ██████╗    ██╗
- ██╔╝    ██║  ██║██╔════╝██║   ██║██╔══██╗██║██╔════╝╚══██╔══╝██║██╔════╝    ╚██╗
-██╔╝     ███████║█████╗  ██║   ██║██████╔╝██║███████╗   ██║   ██║██║          ╚██╗
-╚██╗     ██╔══██║██╔══╝  ██║   ██║██╔══██╗██║╚════██║   ██║   ██║██║          ██╔╝
- ╚██╗    ██║  ██║███████╗╚██████╔╝██║  ██║██║███████║   ██║   ██║╚██████╗    ██╔╝
-  ╚═╝    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝   ╚═╝ ╚═════╝    ╚═╝
-           █████╗ ███╗   ██╗ █████╗ ██╗  ██╗   ██╗███████╗██╗███████╗
-          ██╔══██╗████╗  ██║██╔══██╗██║  ╚██╗ ██╔╝██╔════╝██║██╔════╝
-          ███████║██╔██╗ ██║███████║██║   ╚████╔╝ ███████╗██║███████╗
-          ██╔══██║██║╚██╗██║██╔══██║██║    ╚██╔╝  ╚════██║██║╚════██║
-          ██║  ██║██║ ╚████║██║  ██║███████╗██║   ███████║██║███████║
-          ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝╚══════╝
+              ██████╗ ███████╗███╗   ██╗███████╗██████╗ ██╗ ██████╗
+             ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██║██╔════╝
+             ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝██║██║
+             ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██║██║
+             ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║╚██████╗
+              ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝
+   ██╗    ██╗  ██╗███████╗██╗   ██╗██████╗ ██╗███████╗████████╗██╗ ██████╗    ██╗
+  ██╔╝    ██║  ██║██╔════╝██║   ██║██╔══██╗██║██╔════╝╚══██╔══╝██║██╔════╝    ╚██╗
+ ██╔╝     ███████║█████╗  ██║   ██║██████╔╝██║███████╗   ██║   ██║██║          ╚██╗
+ ╚██╗     ██╔══██║██╔══╝  ██║   ██║██╔══██╗██║╚════██║   ██║   ██║██║          ██╔╝
+  ╚██╗    ██║  ██║███████╗╚██████╔╝██║  ██║██║███████║   ██║   ██║╚██████╗    ██╔╝
+   ╚═╝    ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝   ╚═╝   ╚═╝ ╚═════╝    ╚═╝
+            █████╗ ███╗   ██╗ █████╗ ██╗  ██╗   ██╗███████╗██╗███████╗
+           ██╔══██╗████╗  ██║██╔══██╗██║  ╚██╗ ██╔╝██╔════╝██║██╔════╝
+           ███████║██╔██╗ ██║███████║██║   ╚████╔╝ ███████╗██║███████╗
+           ██╔══██║██║╚██╗██║██╔══██║██║    ╚██╔╝  ╚════██║██║╚════██║
+           ██║  ██║██║ ╚████║██║  ██║███████╗██║   ███████║██║███████║
+           ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝╚══════╝
 */
 
-//    ┌─────────────────────────┤ ABOUT ├─────────────────────────┐
-//    │    This heuristic analysis helps detect the presence of   │
-//    │    obfuscation, packers, licensing systems, debugging     │
-//    │    information, file integrity issues, or even potential  │
-//    │    malicious code using advanced and complex checks. It   │
-//    │    includes pinpoint scanning, intelligent inspections,   │
-//    │    signature-based analysis, thorough file content        │
-//    │    evaluation, and much more! >:)                         │
-//    └───────────────────────────────────────────────────────────┘
+//       ┌──────────────────────────┤ ABOUT ├──────────────────────────┐
+//       │     This heuristic analysis helps detect the presence of    │
+//       │     obfuscation, packers, licensing systems, debugging      │
+//       │     information, file integrity issues, or even potential   │
+//       │     malicious code using advanced and complex checks. It    │
+//       │     includes pinpoint scanning, intelligent inspections,    │
+//       │     signature-based analysis, thorough file content         │
+//       │     evaluation, and much more! >:)                          │
+//       └─────────────────────────────────────────────────────────────┘
 
-//    ┌─────────────────────────┤ DONATE ├────────────────────────┐
-//    │     ┌ Did you like my work? :D Thank you! But what        │
-//    │     │ about donation? I'll be very grateful <3            │
-//    │     └─┐                                                   │
-//    │       ├─ Payeer: P1066822521                              │
-//    │       │                   └─ Any amount                   │
-//    │       │                                                   │
-//    │       ├─ BTC:   37uRiHBqK3QiJ2jamqmmk1Q3sCmAmWngcC        │
-//    │       │                   └─ 0.0005 BTC minimum           │
-//    │       │                                                   │
-//    │       ├─ LTC:   MCwRK1Z7K4GYHt9ZrbTR2SMCEqzqQaTbRF        │
-//    │       │                   └─ 0.0010 LTC minimum           │
-//    │       │                                                   │
-//    │       └─ USDT:  TUVH7QkcZws78QMC3XyAwfuzxUbaeLnfAC        │
-//    │          TRC-20 ─┘        └─ 5 USDT minimum               │
-//    └───────────────────────────────────────────────────────────┘
+//       ┌─────────────────────────┤ CONTACTS ├────────────────────────┐
+//       │       ┌ Author is DosX                                      │
+//       │       └┬─ E-Mail: collab@kay-software.ru                    │
+//       │        ├─ GitHub: https://github.com/DosX-dev               │
+//       │        └─ Telegram: @DosX_dev                               │
+//       ├─────────────────────────────────────────────────────────────┤
+//       │      If I don't respond to email, message to Telegram       │
+//       └─────────────────────────────────────────────────────────────┘
 
-//    ┌────────────────────────┤ CONTACTS ├───────────────────────┐
-//    │      ┌ Author is DosX                                     │
-//    │      └┬─ E-Mail: collab@kay-software.ru                   │
-//    │       ├─ GitHub: https://github.com/DosX-dev              │
-//    │       └─ Telegram: @DosX_dev                              │
-//    ├───────────────────────────────────────────────────────────┤
-//    │     If I don't respond to email, message to Telegram      │
-//    └───────────────────────────────────────────────────────────┘
+//       ┌──────────────────────────┤ DONATE ├─────────────────────────┐
+//       │  ┌ Did you like my work? Thank you! What about donation?    │
+//       │  │ This will greatly help the development!                  │
+//       │  └─┐                                                        │
+//       │    ├─ BTC:   bc1qclzlujunh8zyyxaar8y8t0chwfardesq9uvphh     │
+//       │    │                                                        │
+//       │    ├─ SOL:   6693kpkspRU2fauVpMkVznnETGX7GdMsLFQED6QFfaWa   │
+//       │    │                                                        │
+//       │    ├─ TRX:   TYezKdq5YkrSmmUy6d9e212KcHxQigtTqJ             │
+//       │    │                                                        │
+//       │    ├─ ETH:   0xd5f1e450a4A9325165ed6b5ed5E28Da882AB932a     │
+//       │    │  ERC-20 ─┘                                             │
+//       │    │                                                        │
+//       │    └─ USDT:  TYezKdq5YkrSmmUy6d9e212KcHxQigtTqJ             │
+//       │       TRC-20 ─┘                                             │
+//       └─────────────────────────────────────────────────────────────┘
 
-//         ┌───────────────────────────────────────────────┐
-//         │   For the module to work correctly, official  │
-//         │   Detect It Easy components are recommended   │
-//         ├───────────────────────────────────────────────┘
-//         └─┐
-//           └──  Please don't read the code out loud
-//                unless you have exorcism skills
+//             ┌───────────────────────────────────────────────┐
+//             │   For the module to work correctly, official  │
+//             │   Detect It Easy components are recommended   │
+//             ├───────────────────────────────────────────────┘
+//             └─┐
+//               └──  Please don't read the code out loud
+//                    unless you have exorcism skills
 
 "use strict";
 
@@ -78,7 +78,7 @@ const logType = {
 
 var lastOffsetDetected = "0x00";
 
-function detect() { main(); }
+function detect() { return main(); }
 
 function main() {
     if (stubForWrongEnvironment()) return null; // 'PE' is undefined
@@ -86,7 +86,7 @@ function main() {
 
     if (PE.isHeuristicScan()) {
         if (!PE.isVerbose()) {
-            log(logType.warning, "To get the full heuristic scan result use '--verbose'");
+            log(logType.warning, "To get the full heuristic scan result use \"--verbose\"");
         }
 
         log(logType.about, "Generic Heuristic Analysis by DosX (@DosX_dev)");
@@ -107,7 +107,7 @@ function main() {
         scanForMaliciousCode_NET_and_Native();
 
         if (PE.isVerbose()) {
-            scanForLanguages_NET_and_Native();
+            scanForLanguagesAndCompilers_NET_and_Native();
         }
 
         // >> Happy end <<
@@ -173,6 +173,8 @@ function stdout(stringToOut) {
 
 
 function scanForObfuscations_NET() {
+    log(logType.nothing, "Scanning for obfuscation...");
+
     var options = String();
 
     var isDetected = Boolean();
@@ -180,7 +182,9 @@ function scanForObfuscations_NET() {
 
 
 
-    const isVbNet = isVbNetstandardLibraryPresent();
+    const
+        isVbNet = isVbNetStandardLibraryPresent(),
+        isJscriptNet = isJscriptNetStandardLibraryPresent();
 
 
 
@@ -229,6 +233,7 @@ function scanForObfuscations_NET() {
 
     if (PE.isNetGlobalCctorPresent() && !isCppClrLikeApp()) {
         log(logType.net, "Global constructor detected!");
+
         isNetCctorPresent = true;
     }
 
@@ -282,7 +287,7 @@ function scanForObfuscations_NET() {
 
             if (firstOpCode !== "JMP") {
                 if (PE.VAToOffset(PE.getAddressOfEntryPoint()) !== -1) {
-                    log(logType.net, "Very strange EP pattern: " + getEpAsmPattern(onlyOpCodes = true, numberOf = 4).split("|").join(" .. "));
+                    log(logType.net, "Very strange EP pattern: " + getEpAsmPattern(true, 4).split("|").join(" .. "));
                 } else {
                     log(logType.net, "No native entry point");
                 }
@@ -410,6 +415,7 @@ function scanForObfuscations_NET() {
             )
         ) {
             log(logType.net, "Int confusion detected! Offset: " + lastOffsetDetected);
+
             isIntConfusionPresent = true;
         }
     }
@@ -434,10 +440,12 @@ function scanForObfuscations_NET() {
             ]
         ) &&
         (
-            PE.isNetObjectPresent("Ldarg_0") || // MSIL: 'System.Reflection.Emit.OpCodes.Ldarg_0'
-            PE.isNetObjectPresent("CreateDelegate") // MSIL: 'System.Delegate.CreateDelegate'
+            validateNetObject("Ldarg_0") || // MSIL: 'System.Reflection.Emit.OpCodes.Ldarg_0'
+            validateNetObject("CreateDelegate") // MSIL: 'System.Delegate.CreateDelegate'
         ) && !isFrameworkComponent()
     ) {
+        log(logType.net, "Virtualization-like behavior detected!");
+
         isVirtualizationPresent = true;
     }
 
@@ -649,7 +657,7 @@ function scanForObfuscations_NET() {
             if (i > 0 && !isShortNamesPresent) {
                 if (PE.isNetObjectPresent(chars[i])) {
                     shortNamesFound++;
-                    log(logType.net, "Short name found: '" + chars[i] + "' (" + shortNamesFound + "/20)");
+                    log(logType.net, "Short name found: \"" + chars[i] + "\" (" + shortNamesFound + "/20)");
                 }
 
                 if (shortNamesFound === 20) {
@@ -668,7 +676,7 @@ function scanForObfuscations_NET() {
 
     var badNamings = false;
 
-    var buffer = "";
+    var buffer = String();
 
     // get next 0x12c bytes after <Module> .ctor
     for (var i = 0; i < 0x12c; i++) {
@@ -694,11 +702,13 @@ function scanForObfuscations_NET() {
 
     var strangePatternsCounter = 0;
 
+    var isPrivateImplementationDetailsPresent = validateNetObject("<PrivateImplementationDetails>");
+
     for (var i = 0; i < patternsToExplore.length && !badNamings; i++) {
 
         const currentStringPattern = patternsToExplore[i];
 
-        if (PE.isNetObjectPresent("<PrivateImplementationDetails>") && currentStringPattern.length === 40) {
+        if (isPrivateImplementationDetailsPresent && currentStringPattern.length === 40) {
             break;
         }
 
@@ -740,6 +750,7 @@ function scanForObfuscations_NET() {
         )
     ) {
         log(logType.net, "Anti-tamper detected!");
+
         isAntiTamperPresent = true;
     }
 
@@ -834,7 +845,7 @@ function scanForObfuscations_NET() {
     var isStringsEncryptionPresent = false;
 
     if (isVbNet && !isFrameworkComponent()) {
-        if (PE.isNetObjectPresent("Resources") && !validateGlobalUnicodeString(".Resources")) {
+        if (validateNetObject("Resources") && !validateGlobalUnicodeString(".Resources")) {
             log(logType.net, "It appears that the strings are hidden/encrypted and can be loaded dynamically.");
 
             isStringsEncryptionPresent = true;
@@ -934,8 +945,8 @@ function scanForObfuscations_NET() {
             runtimeLibraryName = runtimeInfo.lib,
             protectorName = runtimeInfo.name;
 
-        if (PE.isNetObjectPresent(runtimeLibraryName) || // "runtime.dll"
-            PE.isNetObjectPresent(runtimeLibraryName.substring(0, runtimeLibraryName.length - 4))) { // "runtime"
+        if (validateNetObject(runtimeLibraryName) || // "runtime.dll"
+            validateNetObject(runtimeLibraryName.substring(0, runtimeLibraryName.length - 4))) { // "runtime"
             log(logType.net, protectorName + " runtime detected!");
 
             isProtectionRuntimePresent = true;
@@ -1012,7 +1023,7 @@ function scanForObfuscations_NET() {
         // "Watermark" is only possible in the absence of fake signatures
 
         if (signaturesCounter === 1) {
-            log(logType.nothing, "Watermark (Attribute) found: '" + obfuscatorAttributeFound + "'");
+            log(logType.nothing, "Watermark (Attribute) found: \"" + obfuscatorAttributeFound + "\"");
 
             isWatermarkPresent = true;
         }
@@ -1023,8 +1034,7 @@ function scanForObfuscations_NET() {
             validateSignature("'ByAttribute'") ||
             validateSignature("'ObfuscatorAttribute'") ||
             validateNetObject("ObfuscationAttribute")
-        )) && !isFrameworkComponent()) // System.Reflection.ObfuscationAttribute
-        {
+        )) && !isFrameworkComponent()) { // System.Reflection.ObfuscationAttribute
             isWatermarkPresent = true;
         }
     }
@@ -1048,6 +1058,10 @@ function scanForObfuscations_NET() {
 
     if (buildAssemblyName !== getFileNameWithoutExtension(buildModuleName) || buildAssemblyName === buildModuleName) {
         isBuildInfoModified = true;
+
+        if (isJscriptNet && buildModuleName === "JScript Module") {
+            isBuildInfoModified = false;
+        }
     }
 
     if (isBuildInfoModified) options = addOption(options, "Modified build info");
@@ -1120,6 +1134,8 @@ function scanForObfuscations_NET() {
 
 
 function scanForAntiAnalysis_NET() {
+    log(logType.nothing, "Scanning for anti-analysis tricks...");
+
     var options = String();
 
     var isDetected = false;
@@ -1200,6 +1216,8 @@ function scanForAntiAnalysis_NET() {
 
 
 
+    // https://medium.com/@tarunrd77/dnspy-static-analysis-of-a-net-malware-012806424acf
+
     const antiDnSpyTriggers = [
         "dnspy",
         "dnSpy",
@@ -1209,7 +1227,7 @@ function scanForAntiAnalysis_NET() {
     var isAntiDnSpyPresent = false;
 
     // Iterate through anti-DnSpy triggers
-    for (var l in antiDnSpyTriggers) {
+    for (var l = 0; antiDnSpyTriggers < antiDnSpyTriggers.length; l++) {
         if (!isAntiDnSpyPresent) {
             const dnSpyName = antiDnSpyTriggers[l];
 
@@ -1228,6 +1246,8 @@ function scanForAntiAnalysis_NET() {
 
 
 
+    // https://github.com/icsharpcode/ILSpy
+
     const antiIlSpyTriggers = [
         "ilspy",
         "ilSpy",
@@ -1237,7 +1257,7 @@ function scanForAntiAnalysis_NET() {
 
     var isAntiIlSpyPresent = false;
 
-    for (var l in antiIlSpyTriggers) {
+    for (var l = 0; antiIlSpyTriggers < antiIlSpyTriggers.length; l++) {
         if (!isAntiIlSpyPresent) {
             const ilSpyName = antiIlSpyTriggers[l];
 
@@ -1256,6 +1276,13 @@ function scanForAntiAnalysis_NET() {
 
 
 
+    const isGetModuleHandleDetected = validateSignature("'GetModuleHandle'"); // from 'kernel32.dll'
+
+
+
+
+    // https://en.wikipedia.org/wiki/Sandboxie
+
     const sbieVariants = [
         "sbiedll.",
         "SbieDll.",
@@ -1264,15 +1291,15 @@ function scanForAntiAnalysis_NET() {
 
     var isAntiSbiePresent = false;
 
-    // Check if the signature for 'GetModuleHandle' is present
-    if (validateSignature("'GetModuleHandle'")) { // from 'kernel32.dll'
+    if (isGetModuleHandleDetected) {
         // Iterate through Sandboxie variants
-        for (var l in sbieVariants) {
+        for (var l = 0; l < sbieVariants.length; l++) {
             if (!isAntiSbiePresent) {
                 const sbieLib = sbieVariants[l];
 
                 // Check if the signature for Sandboxie variant is valid using Unicode signature mask or the original signature
                 if (
+                    PE.isNetObjectPresent("IsSandboxiePresent") || // https://github.com/AdvDebug/AntiCrack-DotNet/blob/f3cd8104e952580e0edf298101139d15befe008e/AntiCrack-DotNet/AntiVirtualization.cs#L53
                     validateGlobalUnicodeString(sbieLib) ||
                     validateSignature("'" + sbieLib + "'")
                 ) {
@@ -1287,9 +1314,128 @@ function scanForAntiAnalysis_NET() {
 
 
 
+    // https://help.comodo.com/topic-394-1-767-9229-the-sandbox.html
+
+    const comodoVariants = [
+        "cmdvrt32.",
+        "cmdvrt64.",
+        "CMDVRT32.",
+        "CMDVRT64."
+    ];
+
+    var isAntiComodoPresent = false;
+
+    if (isGetModuleHandleDetected) {
+        // Iterate through Comodo Sandbox variants
+        for (var l = 0; l < comodoVariants.length; l++) {
+            if (!isAntiComodoPresent) {
+                const comodoLib = comodoVariants[l];
+
+                // Check if the signature for Comodo Sandbox variant is valid using Unicode signature mask or the original signature
+                if (
+                    PE.isNetObjectPresent("IsComodoSandboxPresent") || // https://github.com/AdvDebug/AntiCrack-DotNet/blob/f3cd8104e952580e0edf298101139d15befe008e/AntiCrack-DotNet/AntiVirtualization.cs#L64
+                    validateGlobalUnicodeString(comodoLib) ||
+                    validateSignature("'" + comodoLib + "'")
+                ) {
+                    isAntiComodoPresent = true;
+                }
+            }
+        }
+    }
+
+    if (isAntiComodoPresent) options = addOption(options, "Anti-Comodo");
+
+
+
+
+    // https://blog.360totalsecurity.com/en/how-to-use-360-sandbox/
+
+    const qihoo360Variants = [
+        "SxIn.",
+        "SXIn."
+    ];
+
+    var isAntiQihoo360Present = false;
+
+    if (isGetModuleHandleDetected) {
+        // Iterate through Qihoo 360 Sandbox variants
+        for (var l = 0; l < qihoo360Variants.length; l++) {
+            if (!isAntiQihoo360Present) {
+                const qihoo360Lib = qihoo360Variants[l];
+
+                // Check if the signature for Qihoo 360 Sandbox variant is valid using Unicode signature mask or the original signature
+                if (
+                    PE.isNetObjectPresent("IsQihoo360SandboxPresent") || // https://github.com/AdvDebug/AntiCrack-DotNet/blob/f3cd8104e952580e0edf298101139d15befe008e/AntiCrack-DotNet/AntiVirtualization.cs#L75
+                    validateGlobalUnicodeString(qihoo360Lib) ||
+                    validateSignature("'" + qihoo360Lib + "'")
+                ) {
+                    isAntiQihoo360Present = true;
+                }
+            }
+        }
+    }
+
+    if (isAntiQihoo360Present) options = addOption(options, "Anti-Qihoo 360");
+
+
+
+
+    // https://www.networkintelligence.ai/blogs/cuckoo-sandbox/
+
+    const cuckooVariants = [
+        "cuckoomon.",
+        "CUCKOOMON."
+    ];
+
+    var isAntiCuckooPresent = false;
+
+    if (isGetModuleHandleDetected) {
+        // Iterate through Cuckoo Sandbox variants
+        for (var l = 0; l < cuckooVariants.length; l++) {
+            if (!isAntiCuckooPresent) {
+                const cuckooLib = cuckooVariants[l];
+
+                // Check if the signature for Cuckoo Sandbox variant is valid using Unicode signature mask or the original signature
+                if (
+                    PE.isNetObjectPresent("IsCuckooSandboxPresent") || // https://github.com/AdvDebug/AntiCrack-DotNet/blob/f3cd8104e952580e0edf298101139d15befe008e/AntiCrack-DotNet/AntiVirtualization.cs#L86
+                    validateGlobalUnicodeString(cuckooLib) ||
+                    validateSignature("'" + cuckooLib + "'")
+                ) {
+                    isAntiCuckooPresent = true;
+                }
+            }
+        }
+    }
+
+    if (isAntiCuckooPresent) options = addOption(options, "Anti-Cuckoo");
+
+
+
+
+    // https://www.winehq.org/
+
+    var isAntiWinePresent = false;
+
+    var wineGetUnixFileName = "wine_get_unix_file_name";
+
+    if (isGetModuleHandleDetected && (
+        validateGlobalUnicodeString(wineGetUnixFileName) ||
+        validateSignature("'" + wineGetUnixFileName + "'")
+    )) {
+        isAntiWinePresent = true;
+    }
+
+    if (isAntiWinePresent) options = addOption(options, "Anti-Wine");
+
+
+
+
     var isAntiVmPresent = false;
 
-    if (validateNetUnicodeString("vmware") || validateNetUnicodeString("VirtualBox")) {
+    if (validateNetUnicodeString("vmware") ||
+        validateNetUnicodeString("VirtualBox") ||
+        validateNetUnicodeString("VMBusHID") ||
+        validateGlobalUnicodeString("WDAGUtilityAccount")) {
         isAntiVmPresent = true;
     }
 
@@ -1359,174 +1505,256 @@ function isCppClrLikeApp() {
  */
 function NetOpCodes() {
     // ========== BASIC STACK OPERATIONS ==========
-    this.dup = "25"; // MSIL: 'dup' - Duplicate top stack value
-    this.nop = "00"; // MSIL: 'nop' - No operation
-    this.pop = "26"; // MSIL: 'pop' - Remove top stack value
+    this.dup = "25";                    // MSIL: 'dup' - Duplicate top stack value
+    this.nop = "00";                    // MSIL: 'nop' - No operation
+    this.pop = "26";                    // MSIL: 'pop' - Remove top stack value
 
     // ========== ARITHMETIC OPERATIONS ==========
-    this.add = "58"; // MSIL: 'add' - Add two values
-    this.div = "5B"; // MSIL: 'div' - Divide two values
-    this.mul = "5A"; // MSIL: 'mul' - Multiply two values
-    this.neg = "65"; // MSIL: 'neg' - Negate value
-    this.rem_un = "5E"; // MSIL: 'rem.un' - Remainder (unsigned)
-    this.sub = "59"; // MSIL: 'sub' - Subtract two values
+    this.add = "58";                    // MSIL: 'add' - Add two values
+    this.add_ovf = "D6";                // MSIL: 'add.ovf' - Add signed integer values with overflow check
+    this.add_ovf_un = "D7";             // MSIL: 'add.ovf.un' - Add unsigned integer values with overflow check
+    this.div = "5B";                    // MSIL: 'div' - Divide two values
+    this.div_un = "5C";                 // MSIL: 'div.un' - Divide unsigned values
+    this.mul = "5A";                    // MSIL: 'mul' - Multiply two values
+    this.mul_ovf = "D8";                // MSIL: 'mul.ovf' - Multiply signed integer values with overflow check
+    this.mul_ovf_un = "D9";             // MSIL: 'mul.ovf.un' - Multiply unsigned integer values with overflow check
+    this.neg = "65";                    // MSIL: 'neg' - Negate value
+    this.rem = "5D";                    // MSIL: 'rem' - Remainder when dividing two values
+    this.rem_un = "5E";                 // MSIL: 'rem.un' - Remainder (unsigned)
+    this.sub = "59";                    // MSIL: 'sub' - Subtract two values
+    this.sub_ovf = "DA";                // MSIL: 'sub.ovf' - Subtract native int with overflow check
+    this.sub_ovf_un = "DB";             // MSIL: 'sub.ovf.un' - Subtract unsigned int with overflow check
 
     // ========== LOGICAL OPERATIONS ==========
-    this.and = "5F"; // MSIL: 'and' - Bitwise AND
-    this.not = "66"; // MSIL: 'not' - Bitwise NOT
-    this.or = "60"; // MSIL: 'or' - Bitwise OR
-    this.shl = "62"; // MSIL: 'shl' - Shift left
-    this.shr = "63"; // MSIL: 'shr' - Shift right
-    this.shr_un = "64"; // MSIL: 'shr.un' - Shift right (unsigned)
-    this.xor = "61"; // MSIL: 'xor' - Bitwise XOR
+    this.and = "5F";                    // MSIL: 'and' - Bitwise AND
+    this.not = "66";                    // MSIL: 'not' - Bitwise NOT
+    this.or = "60";                     // MSIL: 'or' - Bitwise OR
+    this.shl = "62";                    // MSIL: 'shl' - Shift left
+    this.shr = "63";                    // MSIL: 'shr' - Shift right
+    this.shr_un = "64";                 // MSIL: 'shr.un' - Shift right (unsigned)
+    this.xor = "61";                    // MSIL: 'xor' - Bitwise XOR
 
     // ========== COMPARISON OPERATIONS ==========
-    this.ceq = "FE01"; // MSIL: 'ceq' - Compare equal
-    this.cgt = "FE02"; // MSIL: 'cgt' - Compare greater than
-    this.cgt_un = "FE03"; // MSIL: 'cgt.un' - Compare greater than (unsigned)
-    this.clt = "FE04"; // MSIL: 'clt' - Compare less than
-    this.clt_un = "FE05"; // MSIL: 'clt.un' - Compare less than (unsigned)
+    this.ceq = "FE01";                  // MSIL: 'ceq' - Compare equal
+    this.cgt = "FE02";                  // MSIL: 'cgt' - Compare greater than
+    this.cgt_un = "FE03";               // MSIL: 'cgt.un' - Compare greater than (unsigned)
+    this.clt = "FE04";                  // MSIL: 'clt' - Compare less than
+    this.clt_un = "FE05";               // MSIL: 'clt.un' - Compare less than (unsigned)
 
     // ========== CONSTANT LOADING ==========
-    this.ltd_i4_m1 = "15"; // MSIL: 'ldc.i4.m1' - Load constant -1
-    this.ldc_i4 = "20????????"; // MSIL: 'ldc.i4' - Load 32-bit integer constant
-    this.ldc_i4_0 = "16"; // MSIL: 'ldc.i4.0' - Load constant 0
-    this.ldc_i4_1 = "17"; // MSIL: 'ldc.i4.1' - Load constant 1
-    this.ldc_i4_2 = "18"; // MSIL: 'ldc.i4.2' - Load constant 2
-    this.ldc_i4_3 = "19"; // MSIL: 'ldc.i4.3' - Load constant 3
-    this.ldc_i4_4 = "1A"; // MSIL: 'ldc.i4.4' - Load constant 4
-    this.ldc_i4_5 = "1B"; // MSIL: 'ldc.i4.5' - Load constant 5
-    this.ldc_i4_6 = "1C"; // MSIL: 'ldc.i4.6' - Load constant 6
-    this.ldc_i4_7 = "1D"; // MSIL: 'ldc.i4.7' - Load constant 7
-    this.ldc_i4_8 = "1E"; // MSIL: 'ldc.i4.8' - Load constant 8
-    this.ldc_i4_s = "1F??"; // MSIL: 'ldc.i4.s' - Load small integer constant
+    this.ldc_i4_m1 = "15";              // MSIL: 'ldc.i4.m1' - Load constant -1
+    this.ldc_i4 = "20????????";         // MSIL: 'ldc.i4' - Load 32-bit integer constant
+    this.ldc_i4_0 = "16";               // MSIL: 'ldc.i4.0' - Load constant 0
+    this.ldc_i4_1 = "17";               // MSIL: 'ldc.i4.1' - Load constant 1
+    this.ldc_i4_2 = "18";               // MSIL: 'ldc.i4.2' - Load constant 2
+    this.ldc_i4_3 = "19";               // MSIL: 'ldc.i4.3' - Load constant 3
+    this.ldc_i4_4 = "1A";               // MSIL: 'ldc.i4.4' - Load constant 4
+    this.ldc_i4_5 = "1B";               // MSIL: 'ldc.i4.5' - Load constant 5
+    this.ldc_i4_6 = "1C";               // MSIL: 'ldc.i4.6' - Load constant 6
+    this.ldc_i4_7 = "1D";               // MSIL: 'ldc.i4.7' - Load constant 7
+    this.ldc_i4_8 = "1E";               // MSIL: 'ldc.i4.8' - Load constant 8
+    this.ldc_i4_s = "1F??";             // MSIL: 'ldc.i4.s' - Load small integer constant
+    this.ldc_i8 = "21????????????????"; // MSIL: 'ldc.i8' - Load 64-bit integer constant
+    this.ldc_r4 = "22????????";         // MSIL: 'ldc.r4' - Load 32-bit float constant
+    this.ldc_r8 = "23????????????????"; // MSIL: 'ldc.r8' - Load 64-bit float constant
+    this.ldnull = "14";                 // MSIL: 'ldnull' - Load null reference
 
     // ========== ARGUMENT OPERATIONS ==========
-    this.ldarg_0 = "02"; // MSIL: 'ldarg.0' - Load argument 0
-    this.ldarg_1 = "03"; // MSIL: 'ldarg.1' - Load argument 1
-    this.ldarg_2 = "04"; // MSIL: 'ldarg.2' - Load argument 2
-    this.ldarg_3 = "05"; // MSIL: 'ldarg.3' - Load argument 3
-    this.ldarg_s = "0E??"; // MSIL: 'ldarg.s' - Load argument (short form)
-    this.starg_s = "10??"; // MSIL: 'starg.s' - Store to argument (short form)
-    this.ldarga = "FE0A????"; // MSIL: 'ldarga' - Load argument address
-    this.starg = "FE0B????"; // MSIL: 'starg' - Store to argument
-    this.ldloca = "FE09????"; // MSIL: 'ldloca' - Load local variable address
-    this.ldloca_s = "12??"; // MSIL: 'ldloca.s' - Load local variable address (short form)
+    this.ldarg = "FE09????";            // MSIL: 'ldarg' - Load argument
+    this.ldarg_0 = "02";                // MSIL: 'ldarg.0' - Load argument 0
+    this.ldarg_1 = "03";                // MSIL: 'ldarg.1' - Load argument 1
+    this.ldarg_2 = "04";                // MSIL: 'ldarg.2' - Load argument 2
+    this.ldarg_3 = "05";                // MSIL: 'ldarg.3' - Load argument 3
+    this.ldarg_s = "0E??";              // MSIL: 'ldarg.s' - Load argument (short form)
+    this.starg_s = "10??";              // MSIL: 'starg.s' - Store to argument (short form)
+    this.ldarga = "FE0A????";           // MSIL: 'ldarga' - Load argument address
+    this.ldarga_s = "0F??";             // MSIL: 'ldarga.s' - Load argument address (short form)
+    this.starg = "FE0B????";            // MSIL: 'starg' - Store to argument
+    this.ldloca = "FE09????";           // MSIL: 'ldloca' - Load local variable address
+    this.ldloca_s = "12??";             // MSIL: 'ldloca.s' - Load local variable address (short form)
 
     // ========== LOCAL VARIABLE OPERATIONS ==========
-    this.ldloc = "FE0C????"; // MSIL: 'ldloc' - Load local variable
-    this.ldloc_0 = "06"; // MSIL: 'ldloc.0' - Load local variable 0
-    this.ldloc_1 = "07"; // MSIL: 'ldloc.1' - Load local variable 1
-    this.ldloc_2 = "08"; // MSIL: 'ldloc.2' - Load local variable 2
-    this.ldloc_3 = "09"; // MSIL: 'ldloc.3' - Load local variable 3
-    this.ldloc_s = "11??"; // MSIL: 'ldloc.s' - Load local variable (short form)
-    this.stloc = "FE0E????"; // MSIL: 'stloc' - Store to local variable
-    this.stloc_0 = "0A"; // MSIL: 'stloc.0' - Store to local variable 0
-    this.stloc_1 = "0B"; // MSIL: 'stloc.1' - Store to local variable 1
-    this.stloc_2 = "0C"; // MSIL: 'stloc.2' - Store to local variable 2
-    this.stloc_3 = "0D"; // MSIL: 'stloc.3' - Store to local variable 3
-    this.stloc_s = "13??"; // MSIL: 'stloc.s' - Store to local variable (short form)
+    this.ldloc = "FE0C????";            // MSIL: 'ldloc' - Load local variable
+    this.ldloc_0 = "06";                // MSIL: 'ldloc.0' - Load local variable 0
+    this.ldloc_1 = "07";                // MSIL: 'ldloc.1' - Load local variable 1
+    this.ldloc_2 = "08";                // MSIL: 'ldloc.2' - Load local variable 2
+    this.ldloc_3 = "09";                // MSIL: 'ldloc.3' - Load local variable 3
+    this.ldloc_s = "11??";              // MSIL: 'ldloc.s' - Load local variable (short form)
+    this.stloc = "FE0E????";            // MSIL: 'stloc' - Store to local variable
+    this.stloc_0 = "0A";                // MSIL: 'stloc.0' - Store to local variable 0
+    this.stloc_1 = "0B";                // MSIL: 'stloc.1' - Store to local variable 1
+    this.stloc_2 = "0C";                // MSIL: 'stloc.2' - Store to local variable 2
+    this.stloc_3 = "0D";                // MSIL: 'stloc.3' - Store to local variable 3
+    this.stloc_s = "13??";              // MSIL: 'stloc.s' - Store to local variable (short form)
 
     // ========== FIELD OPERATIONS ==========
-    this.ldfld = "7B????????"; // MSIL: 'ldfld' - Load instance field
-    this.ldflda = "7C????????"; // MSIL: 'ldflda' - Load field address
-    this.ldsfld = "7E????????"; // MSIL: 'ldsfld' - Load static field
-    this.stfld = "7D????????"; // MSIL: 'stfld' - Store to instance field
+    this.ldfld = "7B????????";          // MSIL: 'ldfld' - Load instance field
+    this.ldflda = "7C????????";         // MSIL: 'ldflda' - Load field address
+    this.ldsfld = "7E????????";         // MSIL: 'ldsfld' - Load static field
+    this.ldsflda = "7F????????";        // MSIL: 'ldsflda' - Load static field address
+    this.stfld = "7D????????";          // MSIL: 'stfld' - Store to instance field
+    this.stsfld = "80????????";         // MSIL: 'stsfld' - Store to static field
 
     // ========== ARRAY OPERATIONS ==========
-    this.ldelem_i = "97"; // MSIL: 'ldelem.i' - Load array element (native int)
-    this.ldelem_u4 = "95"; // MSIL: 'ldelem.u4' - Load array element (unsigned 32-bit)
-    this.ldelema = "8F????????"; // MSIL: 'ldelema' - Load array element address
-    this.ldlen = "8E"; // MSIL: 'ldlen' - Load array length
-    this.newarr = "8D????????"; // MSIL: 'newarr' - Create new array
-    this.stelem_i = "9B"; // MSIL: 'stelem.i' - Store to array element (native int)
-    this.stelem_i1 = "9C"; // MSIL: 'stelem.i1' - Store to array element (8-bit)
-    this.stelem_i2 = "9D"; // MSIL: 'stelem.i2' - Store to array element (16-bit)
-    this.stelem_i4 = "9E"; // MSIL: 'stelem.i4' - Store to array element (32-bit)
-    this.stelem_i8 = "9F"; // MSIL: 'stelem.i8' - Store to array element (64-bit)
-    this.stelem_r4 = "A0"; // MSIL: 'stelem.r4' - Store to array element (32-bit float)
-    this.stelem_r8 = "A1"; // MSIL: 'stelem.r8' - Store to array element (64-bit float)
-    this.stelem_ref = "A2"; // MSIL: 'stelem.ref' - Store to array element (object reference)
-    this.ldelem_ref = "9A"; // MSIL: 'ldelem.ref' - Load array element (object reference)
+    this.ldelem = "A3????????";         // MSIL: 'ldelem' - Load array element
+    this.ldelem_i = "97";               // MSIL: 'ldelem.i' - Load array element (native int)
+    this.ldelem_i1 = "90";              // MSIL: 'ldelem.i1' - Load array element (8-bit signed)
+    this.ldelem_i2 = "92";              // MSIL: 'ldelem.i2' - Load array element (16-bit signed)
+    this.ldelem_i4 = "94";              // MSIL: 'ldelem.i4' - Load array element (32-bit signed)
+    this.ldelem_i8 = "96";              // MSIL: 'ldelem.i8' - Load array element (64-bit signed)
+    this.ldelem_r4 = "98";              // MSIL: 'ldelem.r4' - Load array element (32-bit float)
+    this.ldelem_r8 = "99";              // MSIL: 'ldelem.r8' - Load array element (64-bit float)
+    this.ldelem_ref = "9A";             // MSIL: 'ldelem.ref' - Load array element (object reference)
+    this.ldelem_u1 = "91";              // MSIL: 'ldelem.u1' - Load array element (unsigned 8-bit)
+    this.ldelem_u2 = "93";              // MSIL: 'ldelem.u2' - Load array element (unsigned 16-bit)
+    this.ldelem_u4 = "95";              // MSIL: 'ldelem.u4' - Load array element (unsigned 32-bit)
+    this.ldelema = "8F????????";        // MSIL: 'ldelema' - Load array element address
+    this.ldlen = "8E";                  // MSIL: 'ldlen' - Load array length
+    this.newarr = "8D????????";         // MSIL: 'newarr' - Create new array
+    this.stelem = "A4????????";         // MSIL: 'stelem' - Store to array element
+    this.stelem_i = "9B";               // MSIL: 'stelem.i' - Store to array element (native int)
+    this.stelem_i1 = "9C";              // MSIL: 'stelem.i1' - Store to array element (8-bit)
+    this.stelem_i2 = "9D";              // MSIL: 'stelem.i2' - Store to array element (16-bit)
+    this.stelem_i4 = "9E";              // MSIL: 'stelem.i4' - Store to array element (32-bit)
+    this.stelem_i8 = "9F";              // MSIL: 'stelem.i8' - Store to array element (64-bit)
+    this.stelem_r4 = "A0";              // MSIL: 'stelem.r4' - Store to array element (32-bit float)
+    this.stelem_r8 = "A1";              // MSIL: 'stelem.r8' - Store to array element (64-bit float)
+    this.stelem_ref = "A2";             // MSIL: 'stelem.ref' - Store to array element (object reference)
 
     // ========== INDIRECT OPERATIONS ==========
-    this.ldind_i = "4D"; // MSIL: 'ldind.i' - Load indirect native int
-    this.ldind_i1 = "46"; // MSIL: 'ldind.i1' - Load indirect 8-bit value
-    this.ldind_i2 = "48"; // MSIL: 'ldind.i2' - Load indirect 16-bit value
-    this.ldind_i4 = "4A"; // MSIL: 'ldind.i4' - Load indirect 32-bit value
-    this.ldind_i8 = "4C"; // MSIL: 'ldind.i8' - Load indirect 64-bit value
-    this.stind_i4 = "54"; // MSIL: 'stind.i4' - Store indirect 32-bit value
+    this.ldind_i = "4D";                // MSIL: 'ldind.i' - Load indirect native int
+    this.ldind_i1 = "46";               // MSIL: 'ldind.i1' - Load indirect 8-bit value
+    this.ldind_i2 = "48";               // MSIL: 'ldind.i2' - Load indirect 16-bit value
+    this.ldind_i4 = "4A";               // MSIL: 'ldind.i4' - Load indirect 32-bit value
+    this.ldind_i8 = "4C";               // MSIL: 'ldind.i8' - Load indirect 64-bit value
+    this.ldind_r4 = "4E";               // MSIL: 'ldind.r4' - Load indirect 32-bit float
+    this.ldind_r8 = "4F";               // MSIL: 'ldind.r8' - Load indirect 64-bit float
+    this.ldind_ref = "50";              // MSIL: 'ldind.ref' - Load indirect object reference
+    this.ldind_u1 = "47";               // MSIL: 'ldind.u1' - Load indirect unsigned 8-bit value
+    this.ldind_u2 = "49";               // MSIL: 'ldind.u2' - Load indirect unsigned 16-bit value
+    this.ldind_u4 = "4B";               // MSIL: 'ldind.u4' - Load indirect unsigned 32-bit value
+    this.stind_i = "DF";                // MSIL: 'stind.i' - Store indirect native int
+    this.stind_i1 = "52";               // MSIL: 'stind.i1' - Store indirect 8-bit value
+    this.stind_i2 = "53";               // MSIL: 'stind.i2' - Store indirect 16-bit value
+    this.stind_i4 = "54";               // MSIL: 'stind.i4' - Store indirect 32-bit value
+    this.stind_i8 = "55";               // MSIL: 'stind.i8' - Store indirect 64-bit value
+    this.stind_r4 = "56";               // MSIL: 'stind.r4' - Store indirect 32-bit float
+    this.stind_r8 = "57";               // MSIL: 'stind.r8' - Store indirect 64-bit float
+    this.stind_ref = "51";              // MSIL: 'stind.ref' - Store indirect object reference
 
     // ========== CONTROL FLOW ==========
-    this.beq = "3B????????"; // MSIL: 'beq' - Branch if equal
-    this.bge = "3C????????"; // MSIL: 'bge' - Branch if greater or equal
-    this.bgt = "3D????????"; // MSIL: 'bgt' - Branch if greater than
-    this.ble = "3E????????"; // MSIL: 'ble' - Branch if less or equal
-    this.blt = "3F????????"; // MSIL: 'blt' - Branch if less than
-    this.bne_un = "40????????"; // MSIL: 'bne.un' - Branch if not equal (unsigned)
-    this.bne_un_s = "33??"; // MSIL: 'bne.un.s' - Branch if not equal (unsigned, short)
-    this.br = "38????????"; // MSIL: 'br' - Unconditional branch
-    this.br_s = "2B??"; // MSIL: 'br.s' - Unconditional branch (short form)
-    this.brfalse = "39????????"; // MSIL: 'brfalse' - Branch if false/null/zero
-    this.brfalse_s = "2C??"; // MSIL: 'brfalse.s' - Branch if false/null/zero (short)
-    this.brtrue = "3A????????"; // MSIL: 'brtrue' - Branch if true/non-null/non-zero
-    this.brtrue_s = "2D??"; // MSIL: 'brtrue.s' - Branch if true/non-null/non-zero (short)
-    this.jmp = "27????????"; // MSIL: 'jmp' - Jump to method
-    this.call = "28????????"; // MSIL: 'call' - Call method
-    this.calli = "29????????"; // MSIL: 'calli' - Call indirect
-    this.ldtoken = "D0????????"; // MSIL: 'ldtoken' - Load metadata token
-    this.ldftn = "FE06????????"; // MSIL: 'ldftn' - Load function pointer
-    this.leave = "DD????????"; // MSIL: 'leave' - Exit protected region
-    this.leave_s = "DE??"; // MSIL: 'leave.s' - Exit protected region (short form)
-    this.ret = "2A"; // MSIL: 'ret' - Return from method
-    this.switch__nobody = "45"; // MSIL: 'switch' - Switch statement
+    this.beq = "3B????????";            // MSIL: 'beq' - Branch if equal
+    this.beq_s = "2E??";                // MSIL: 'beq.s' - Branch if equal (short form)
+    this.bge = "3C????????";            // MSIL: 'bge' - Branch if greater or equal
+    this.bge_s = "2F??";                // MSIL: 'bge.s' - Branch if greater or equal (short form)
+    this.bge_un = "41????????";         // MSIL: 'bge.un' - Branch if greater or equal (unsigned/unordered)
+    this.bge_un_s = "34??";             // MSIL: 'bge.un.s' - Branch if greater or equal (unsigned/unordered, short)
+    this.bgt = "3D????????";            // MSIL: 'bgt' - Branch if greater than
+    this.bgt_s = "30??";                // MSIL: 'bgt.s' - Branch if greater than (short form)
+    this.bgt_un = "42????????";         // MSIL: 'bgt.un' - Branch if greater than (unsigned/unordered)
+    this.bgt_un_s = "35??";             // MSIL: 'bgt.un.s' - Branch if greater than (unsigned/unordered, short)
+    this.ble = "3E????????";            // MSIL: 'ble' - Branch if less or equal
+    this.ble_s = "31??";                // MSIL: 'ble.s' - Branch if less or equal (short form)
+    this.ble_un = "43????????";         // MSIL: 'ble.un' - Branch if less or equal (unsigned/unordered)
+    this.ble_un_s = "36??";             // MSIL: 'ble.un.s' - Branch if less or equal (unsigned/unordered, short)
+    this.blt = "3F????????";            // MSIL: 'blt' - Branch if less than
+    this.blt_s = "32??";                // MSIL: 'blt.s' - Branch if less than (short form)
+    this.blt_un = "44????????";         // MSIL: 'blt.un' - Branch if less than (unsigned/unordered)
+    this.blt_un_s = "37??";             // MSIL: 'blt.un.s' - Branch if less than (unsigned/unordered, short)
+    this.bne_un = "40????????";         // MSIL: 'bne.un' - Branch if not equal (unsigned)
+    this.bne_un_s = "33??";             // MSIL: 'bne.un.s' - Branch if not equal (unsigned, short)
+    this.br = "38????????";             // MSIL: 'br' - Unconditional branch
+    this.br_s = "2B??";                 // MSIL: 'br.s' - Unconditional branch (short form)
+    this.break_ = "01";                 // MSIL: 'break' - Breakpoint instruction
+    this.brfalse = "39????????";        // MSIL: 'brfalse' - Branch if false/null/zero
+    this.brfalse_s = "2C??";            // MSIL: 'brfalse.s' - Branch if false/null/zero (short)
+    this.brtrue = "3A????????";         // MSIL: 'brtrue' - Branch if true/non-null/non-zero
+    this.brtrue_s = "2D??";             // MSIL: 'brtrue.s' - Branch if true/non-null/non-zero (short)
+    this.call = "28????????";           // MSIL: 'call' - Call method
+    this.calli = "29????????";          // MSIL: 'calli' - Call indirect
+    this.callvirt = "6F????????";       // MSIL: 'callvirt' - Call virtual method
+    this.jmp = "27????????";            // MSIL: 'jmp' - Jump to method
+    this.ldtoken = "D0????????";        // MSIL: 'ldtoken' - Load metadata token
+    this.ldftn = "FE06????????";        // MSIL: 'ldftn' - Load function pointer
+    this.ldvirtftn = "FE07????????";    // MSIL: 'ldvirtftn' - Load virtual function pointer
+    this.leave = "DD????????";          // MSIL: 'leave' - Exit protected region
+    this.leave_s = "DE??";              // MSIL: 'leave.s' - Exit protected region (short form)
+    this.ret = "2A";                    // MSIL: 'ret' - Return from method
+    this.switch__nobody = "45";         // MSIL: 'switch' - Switch statement
 
     // ========== TYPE OPERATIONS ==========
-    this.box = "8C????????"; // MSIL: 'box' - Convert value type to object reference
-    this.castclass = "74????????"; // MSIL: 'castclass' - Cast object to class
-    this.conv_i1 = "67"; // MSIL: 'conv.i1' - Convert to 8-bit integer
-    this.conv_i2 = "68"; // MSIL: 'conv.i2' - Convert to 16-bit integer
-    this.conv_i4 = "69"; // MSIL: 'conv.i4' - Convert to 32-bit integer
-    this.conv_i8 = "6A"; // MSIL: 'conv.i8' - Convert to 64-bit integer
-    this.conv_u1 = "D2"; // MSIL: 'conv.u1' - Convert to unsigned 8-bit integer
-    this.conv_u2 = "D1"; // MSIL: 'conv.u2' - Convert to unsigned 16-bit integer
-    this.conv_u4 = "6D"; // MSIL: 'conv.u4' - Convert to unsigned 32-bit integer
-    this.conv_u8 = "6E"; // MSIL: 'conv.u8' - Convert to unsigned 64-bit integer
-    this.conv_r4 = "6B"; // MSIL: 'conv.r4' - Convert to 32-bit float
-    this.conv_r8 = "6C"; // MSIL: 'conv.r8' - Convert to 64-bit float
-    this.conv_ovf_i1 = "B3"; // MSIL: 'conv.ovf.i1' - Convert to 8-bit integer with overflow check
-    this.conv_ovf_i2 = "B5"; // MSIL: 'conv.ovf.i2' - Convert to 16-bit integer with overflow check
-    this.conv_ovf_i4 = "B7"; // MSIL: 'conv.ovf.i4' - Convert to 32-bit integer with overflow check
-    this.conv_ovf_i8 = "B9"; // MSIL: 'conv.ovf.i8' - Convert to 64-bit integer with overflow check
-    this.conv_ovf_i1_un = "82"; // MSIL: 'conv.ovf.i1.un' - Convert to unsigned 8-bit integer with overflow check
-    this.conv_ovf_i2_un = "83"; // MSIL: 'conv.ovf.i2.un' - Convert to unsigned 16-bit integer with overflow check
-    this.conv_ovf_i4_un = "84"; // MSIL: 'conv.ovf.i4.un' - Convert to unsigned 32-bit integer with overflow check
-    this.conv_ovf_i8_un = "85"; // MSIL: 'conv.ovf.i8.un' - Convert to unsigned 64-bit integer with overflow check
-    this.isinst = "75????????"; // MSIL: 'isinst' - Test if object is instance of class
-    this.sizeof = "FE1C????????"; // MSIL: 'sizeof' - Get size of value type
-    this.unbox = "79????????"; // MSIL: 'unbox' - Convert object reference to value type
-    this.unbox_any = "A5????????"; // MSIL: 'unbox.any' - Convert boxed type to value
+    this.box = "8C????????";            // MSIL: 'box' - Convert value type to object reference
+    this.castclass = "74????????";      // MSIL: 'castclass' - Cast object to class
+    this.ckfinite = "C3";               // MSIL: 'ckfinite' - Check if value is finite number
+    this.conv_i = "D3";                 // MSIL: 'conv.i' - Convert to native int
+    this.conv_i1 = "67";                // MSIL: 'conv.i1' - Convert to 8-bit integer
+    this.conv_i2 = "68";                // MSIL: 'conv.i2' - Convert to 16-bit integer
+    this.conv_i4 = "69";                // MSIL: 'conv.i4' - Convert to 32-bit integer
+    this.conv_i8 = "6A";                // MSIL: 'conv.i8' - Convert to 64-bit integer
+    this.conv_ovf_i = "D4";             // MSIL: 'conv.ovf.i' - Convert to native int with overflow check
+    this.conv_ovf_i_un = "8A";          // MSIL: 'conv.ovf.i.un' - Convert unsigned to native int with overflow check
+    this.conv_ovf_i1 = "B3";            // MSIL: 'conv.ovf.i1' - Convert to 8-bit integer with overflow check
+    this.conv_ovf_i1_un = "82";         // MSIL: 'conv.ovf.i1.un' - Convert to unsigned 8-bit integer with overflow check
+    this.conv_ovf_i2 = "B5";            // MSIL: 'conv.ovf.i2' - Convert to 16-bit integer with overflow check
+    this.conv_ovf_i2_un = "83";         // MSIL: 'conv.ovf.i2.un' - Convert to unsigned 16-bit integer with overflow check
+    this.conv_ovf_i4 = "B7";            // MSIL: 'conv.ovf.i4' - Convert to 32-bit integer with overflow check
+    this.conv_ovf_i4_un = "84";         // MSIL: 'conv.ovf.i4.un' - Convert to unsigned 32-bit integer with overflow check
+    this.conv_ovf_i8 = "B9";            // MSIL: 'conv.ovf.i8' - Convert to 64-bit integer with overflow check
+    this.conv_ovf_i8_un = "85";         // MSIL: 'conv.ovf.i8.un' - Convert to unsigned 64-bit integer with overflow check
+    this.conv_ovf_u = "D5";             // MSIL: 'conv.ovf.u' - Convert to native unsigned int with overflow check
+    this.conv_ovf_u_un = "8B";          // MSIL: 'conv.ovf.u.un' - Convert unsigned to native unsigned int with overflow check
+    this.conv_ovf_u1 = "B4";            // MSIL: 'conv.ovf.u1' - Convert to unsigned 8-bit integer with overflow check
+    this.conv_ovf_u1_un = "86";         // MSIL: 'conv.ovf.u1.un' - Convert unsigned to unsigned 8-bit integer with overflow check
+    this.conv_ovf_u2 = "B6";            // MSIL: 'conv.ovf.u2' - Convert to unsigned 16-bit integer with overflow check
+    this.conv_ovf_u2_un = "87";         // MSIL: 'conv.ovf.u2.un' - Convert unsigned to unsigned 16-bit integer with overflow check
+    this.conv_ovf_u4 = "B8";            // MSIL: 'conv.ovf.u4' - Convert to unsigned 32-bit integer with overflow check
+    this.conv_ovf_u4_un = "88";         // MSIL: 'conv.ovf.u4.un' - Convert unsigned to unsigned 32-bit integer with overflow check
+    this.conv_ovf_u8 = "BA";            // MSIL: 'conv.ovf.u8' - Convert to unsigned 64-bit integer with overflow check
+    this.conv_ovf_u8_un = "89";         // MSIL: 'conv.ovf.u8.un' - Convert unsigned to unsigned 64-bit integer with overflow check
+    this.conv_r_un = "76";              // MSIL: 'conv.r.un' - Convert unsigned integer to floating-point
+    this.conv_r4 = "6B";                // MSIL: 'conv.r4' - Convert to 32-bit float
+    this.conv_r8 = "6C";                // MSIL: 'conv.r8' - Convert to 64-bit float
+    this.conv_u = "E0";                 // MSIL: 'conv.u' - Convert to native unsigned int
+    this.conv_u1 = "D2";                // MSIL: 'conv.u1' - Convert to unsigned 8-bit integer
+    this.conv_u2 = "D1";                // MSIL: 'conv.u2' - Convert to unsigned 16-bit integer
+    this.conv_u4 = "6D";                // MSIL: 'conv.u4' - Convert to unsigned 32-bit integer
+    this.conv_u8 = "6E";                // MSIL: 'conv.u8' - Convert to unsigned 64-bit integer
+    this.isinst = "75????????";         // MSIL: 'isinst' - Test if object is instance of class
+    this.mkrefany = "C6????????";       // MSIL: 'mkrefany' - Push typed reference to value
+    this.refanytype = "FE1D";           // MSIL: 'refanytype' - Push type token from typed reference
+    this.refanyval = "C2????????";      // MSIL: 'refanyval' - Push address from typed reference
+    this.sizeof = "FE1C????????";       // MSIL: 'sizeof' - Get size of value type
+    this.unbox = "79????????";          // MSIL: 'unbox' - Convert object reference to value type
+    this.unbox_any = "A5????????";      // MSIL: 'unbox.any' - Convert boxed type to value
 
     // ========== OBJECT OPERATIONS ==========
-    this.cpobj = "70????????"; // MSIL: 'cpobj' - Copy value type
-    this.initobj = "FE15????????"; // MSIL: 'initobj' - Initialize value type
-    this.ldobj = "71????????"; // MSIL: 'ldobj' - Load value type from address
-    this.ldstr = "72????????"; // MSIL: 'ldstr' - Load string literal
-    this.newobj = "73????????"; // MSIL: 'newobj' - Create new object instance
-    this.stobj = "81????????"; // MSIL: 'stobj' - Store value type to address
+    this.cpblk = "FE17";                // MSIL: 'cpblk' - Copy block of memory
+    this.cpobj = "70????????";          // MSIL: 'cpobj' - Copy value type
+    this.initblk = "FE18";              // MSIL: 'initblk' - Initialize block of memory
+    this.initobj = "FE15????????";      // MSIL: 'initobj' - Initialize value type
+    this.ldobj = "71????????";          // MSIL: 'ldobj' - Load value type from address
+    this.ldstr = "72????????";          // MSIL: 'ldstr' - Load string literal
+    this.localloc = "FE0F";             // MSIL: 'localloc' - Allocate space from local memory pool
+    this.newobj = "73????????";         // MSIL: 'newobj' - Create new object instance
+    this.stobj = "81????????";          // MSIL: 'stobj' - Store value type to address
 
     // ========== EXCEPTION HANDLING ==========
-    this.rethrow = "FE1A"; // MSIL: 'rethrow' - Rethrow current exception
-    this._throw = "7A"; // MSIL: 'throw' - Throw exception
+    this.endfilter = "FE11";            // MSIL: 'endfilter' - End exception filter clause
+    this.endfinally = "DC";             // MSIL: 'endfinally' - End finally clause
+    this.rethrow = "FE1A";              // MSIL: 'rethrow' - Rethrow current exception
+    this._throw = "7A";                 // MSIL: 'throw' - Throw exception
 
     // ========== PREFIX INSTRUCTIONS ==========
-    this.readonly = "FE1E"; // MSIL: 'readonly' - Subsequent array address operation performs no type check
-    this.tail = "FE14"; // MSIL: 'tail' - Subsequent call terminates current method
-    this.volatile = "FE13"; // MSIL: 'volatile' - Subsequent pointer reference is volatile
+    this.constrained = "FE16????????"; // MSIL: 'constrained' - Constrain type for virtual method call
+    this.no_ = "FE19??";               // MSIL: 'no.' - Skip fault check (typecheck, rangecheck, nullcheck)
+    this.readonly = "FE1E";            // MSIL: 'readonly' - Subsequent array address operation performs no type check
+    this.unaligned = "FE12??";         // MSIL: 'unaligned.' - Subsequent pointer instruction might be unaligned (alignment: 1, 2, or 4)
+    this.volatile = "FE13";            // MSIL: 'volatile' - Subsequent pointer reference is volatile
 
     // ========== UTILITY OPCODES ==========
-    this._unknown = "**"; // Unknown opcode pattern (any byte except 0x00)
-    this._any = "??"; // Any single byte pattern
+    this._unknown = "**";              // Unknown opcode pattern (any byte except 0x00)
+    this._any = "??";                  // Any single byte pattern
+    this.arglist = "FE00";             // MSIL: 'arglist' - Return argument list handle
 
     /**
      * Sets strict operand values for MSIL opcodes with variable operands.
@@ -1665,7 +1893,7 @@ function removeWhitespaces(inputString) {
     }
 
     // Regex removes all whitespace: spaces, tabs, newlines, carriage returns
-    return inputString.replace(/\s+/g, "");
+    return inputString.replace(/\s+/g, String());
 }
 
 
@@ -1715,7 +1943,7 @@ function clearSectionName(sectionName) {
 
     // Remove control characters (0x00-0x1F) and extended control chars (0x7F-0x9F)
     // This prevents newlines, tabs, null bytes from breaking DiE output format
-    var cleaned = sectionName.replace(/[\x00-\x1F\x7F-\x9F]/g, "");
+    var cleaned = sectionName.replace(/[\x00-\x1F\x7F-\x9F]/g, String());
 
     // Remove leading/trailing whitespace
     cleaned = cleaned.trim();
@@ -1769,6 +1997,8 @@ function getFileNameWithoutExtension(fileName) {
 // now partially works with Native files.
 
 function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native apps
+    log(logType.nothing, "Scanning for packers and cryptors...");
+
     var options = String();
 
     var isDetected = Boolean(),
@@ -1799,7 +2029,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
 
         // Check if any class from System.Security.Cryptography namespace is used (non-full name) - for cryptors
-        if (findAndMark("System.Security.Cryptography", isFullName = false) != String()) {
+        if (findAndMark("System.Security.Cryptography", false) != String()) {
 
             // Specify cryptography classes to look for
             const cryptoClasses = [
@@ -1823,12 +2053,11 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
             ];
 
             // Iterate through cryptography classes
-            for (var i in cryptoClasses) {
+            for (var i = 0; i < cryptoClasses.length; i++) {
                 if (!isCryptor) {
                     var cryptoClassSign = cryptoClasses[i],
                         result = findAndMark(
-                            sign = cryptoClassSign,
-                            isFullName = true
+                            cryptoClassSign, true
                         );
 
                     // Check if assembly invoke is found and the cryptography class is present
@@ -1848,7 +2077,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
 
         // Check if any class from System.IO.Compression namespace is used (non-full name)
-        if (findAndMark("System.IO.Compression", isFullName = false).length) {
+        if (findAndMark("System.IO.Compression", false).length) {
 
             // Specify compression classes to look for
             const compressionClasses = [
@@ -1857,9 +2086,9 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
             ];
 
             // Iterate through compression classes
-            for (var i in compressionClasses) {
+            for (var i = 0; i < compressionClasses.length; i++) {
                 var compressionClassSign = compressionClasses[i],
-                    result = findAndMark(compressionClassSign, isFullName = true);
+                    result = findAndMark(compressionClassSign, true);
 
                 // Check if assembly invoke is found and the compression class is present
                 if (isAssemblyInvokeFound && result.length) {
@@ -1877,19 +2106,21 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
 
 
+        // RunPE is a method for running payload from RAM, with minimal writing to disk.
+
         var isRunPePresent = false;
 
-        if (PE.isNetObjectPresent("RunPE") ||
-            PE.isNetObjectPresent("PELoader") || // https://github.com/nettitude/RunPE/blob/main/RunPE/Internals/PELoader.cs
-            PE.isNetObjectPresent("CMemoryExecute") || // https://github.com/wojciech-kulik/Sample-Projects/blob/master/Windows%20Desktop/WIN32_MemoryAppLoader/MemoryAppLoader/CMemoryExecute.cs
-            (PE.isNetObjectPresent("GetProcAddress") && PE.isNetUStringPresent("WriteProcessMemory") && PE.isNetUStringPresent("VirtualAllocEx") && PE.isNetUStringPresent("ZwUnmapViewOfSection")) ||
+        if (validateNetObject("RunPE") ||
+            validateNetObject("PELoader") || // https://github.com/nettitude/RunPE/blob/main/RunPE/Internals/PELoader.cs
+            validateNetObject("CMemoryExecute") || // https://github.com/wojciech-kulik/Sample-Projects/blob/master/Windows%20Desktop/WIN32_MemoryAppLoader/MemoryAppLoader/CMemoryExecute.cs
+            (validateNetObject("GetProcAddress") && validateNetUnicodeString("WriteProcessMemory") && validateNetUnicodeString("VirtualAllocEx") && validateNetUnicodeString("ZwUnmapViewOfSection")) ||
             (
-                (PE.isNetObjectPresent("WriteProcessMemory") || PE.isNetObjectPresent("NtWriteVirtualMemory")) &&
-                (PE.isNetObjectPresent("ZwUnmapViewOfSection") || PE.isNetObjectPresent("NtUnmapViewOfSection")) &&
-                (PE.isNetObjectPresent("CreateProcess") || PE.isNetObjectPresent("NtCreateProcess") || PE.isNetObjectPresent("CreateProcessA") || PE.isNetObjectPresent("CreateProcessW")) &&
-                PE.isNetObjectPresent("VirtualAllocEx"))
+                (validateNetObject("WriteProcessMemory") || validateNetObject("NtWriteVirtualMemory")) &&
+                (validateNetObject("ZwUnmapViewOfSection") || validateNetObject("NtUnmapViewOfSection")) &&
+                (validateNetObject("CreateProcess") || validateNetObject("NtCreateProcess") || validateNetObject("CreateProcessA") || validateNetObject("CreateProcessW")) &&
+                validateNetObject("VirtualAllocEx"))
         ) {
-            log(logType.net, "RunPE-like behavior detected");
+            log(logType.net, "RunPE-like behavior detected!");
 
             isRunPePresent = true;
         }
@@ -1956,7 +2187,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
             for (var k in sfxEntries) {
                 if (PE.compareEP(sfxEntries[k])) {
-                    log(logType.nothing, "SFX entry pattern: " + sfxEntries[k]);
+                    log(logType.nothing, "EP like SFX: \"" + sfxEntries[k] + "\"");
 
                     isSfx = true;
                 }
@@ -1984,6 +2215,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         "BE........AD8BF8", // samples by: WinUPack (x32)
         "68........9C60E8", // samples by: XComp, XPACK (x32)
         "53558BE833DBEB60", // samples by: WWPack (x32)
+        "E8000000005D81ED", // samples by: ASPack (x32), TTP Pack (x32)
         "BD........C745", // samples by: kkrunchy (x32)
         "57565351524150", // samples by: mpress (x64)
         "B8........5064", // samples by: PECompact (x32)
@@ -2010,7 +2242,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
     ];
 
     // Iterate through the entries to check against the entry point
-    for (var e in entries) {
+    for (var e = 0; e < entries.length && !entryLikePacker; e++) {
         if (!entryLikePacker) {
             const entryToCheck = entries[e];
 
@@ -2041,7 +2273,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         case "PUSHA":
         case "PUSHF":
         case "POPA":
-            log(logType.nothing, "'" + firstEpAsmOpCode + "' at EP");
+            log(logType.nothing, "\"" + firstEpAsmOpCode + "\" at EP");
 
             isStartsWithStackOperation = true;
     }
@@ -2131,21 +2363,18 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["PECompact", "0.90-0.91", -1, 0xbea416d1, 0], // https://bitsum.com/portfolio/pecompact/
         ["PECompact", "0.92-0.94", -1, 0x93312c2e, 0],
         ["PECompact", "0.97-0.971b", -1, 0xe6aa8495, 0],
-        ["PECompact", "0.975-1.10b3", -1, 0x29188619, 0],
         ["PECompact", "1.10b7-1.34", -1, 0xe4c11305, 0],
         ["PECompact", "1.30-1.40", 0, 0x9b3305ed, 0],
         ["PECompact", "1.40-1.84", 0, 0xcc5b2a3c, 0],
         ["PECompact", "2.40-3.XX", 0, 0x2652ce4f, 0],
         ["PECompact", "2.40-3.XX", -1, 0xdb8fbb75, 0],
-        ["EXE32PACK", "1.3X-1.4X", 0, 0x174efb84, 0],
         ["tElock", "1.0", -1, 0x051946f7, 0], // https://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/Telock.shtml
         ["tElock", "0.98", 0, 0x3651f68d, 0],
         ["JDPACK", "2.00", 0, 0xc002db0e, 0],
         ["CRINKLER", null, 0, 0x0b0e1fbf, 0],
-        ["WinUpack", null, -1, 0x29188619, 0],
         ["XComp", "0.97-0.98", -1, 0xea1e66e4, 0],
         ["XPack", null, -1, [0x2ac44dd2, 0x6c170ab3], 0],
-        ["kkrunchy", null, -1, 0x29188619, 0], // https://www.farbrausch.de/~fg/kkrunchy/
+        ["kkrunchy", null, 0, 0x29188619, 0], // https://www.farbrausch.de/~fg/kkrunchy/
         ["ANDPakk2", "0.18", -1, 0x29188619, 0],
         ["RLPack", "1.1-1.2", 0, 0x5bd1d713, 0],
         ["RLPack", "1.16+", 0, 0x6889715b, 0],
@@ -2163,11 +2392,13 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["PKLITE32", "1.1", 1, 0x184539e7, 0],
         ["PeX", "0.99", 0, 0x5fbf5fd8, 0],
         ["XComp", null, 0, 0x4bc52e77, 0],
+        ["Fatpack", null, 0, 0x74244911, 0],
         // cryptors
         ["Yoda's Crypter", "1.X", -1, 0x1303a51b, 1],
         ["EXECryptor", "1.4-1.5", -1, 0xd1de53b5, 1],
         ["EXECryptor", "2.X", -1, 0xf51b2817, 1],
         ["Amber", null, -1, 0x97c72051, 1],
+        ["Lumy", null, -1, 0x821669d5, 1],
         // protectors
         ["ASProtect", "1.XX-2.XX", 0, 0x1272f45b, 2], // https://www.asprotect.ru/
         ["Shrinker", "3.2", 0, [0xb2a64858, 0x158af2d0, 0x49e8aa1f], 2],
@@ -2176,6 +2407,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["Enigma", "2.XX", 0, 0xdd92de10, 2],
         ["Enigma", "3.70+", 0, 0xd04c7a50, 2],
         ["PCGUARD", "5.04-5.05", 0, [0x5a169c7a, 0x0b0b2965], 2],
+        ["Vbs To Exe", null, 1, [0x2bc5f1f9, 0x009a2869, 0x5a7ce7d6, 0xe513a67d, 0x4d65f922], 2],
         ["eXPressor", "1.2", -1, [0x66b35c6e, 0x32f4466c], 2], // https://www.cgsoftlabs.ro/express.html
         ["eXPressor", "1.3", -1, [0x921d0280, 0xf51eba68, 0xbc84ce09], 2],
         ["eXPressor", "1.4.5.X", 0, [0x427816ab, 0x3c705cae, 0x4d02e093, 0x958a9ea2], 2],
@@ -2189,8 +2421,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["VMProtect", "3.0.0", -1, 0x1e5500c1, 2],
         ["VMProtect", "3.0.9", -1, 0xc5fb6a4b, 2],
         ["VMProtect", "3.2.0-3.5.0", -1, 0x5caa99c7, 2],
-        ["VMProtect", "3.6.0+", -1, 0x66e03954, 2],
-        ["VMProtect", "3.6.0+", -1, 0xdae9f570, 2],
+        ["VMProtect", "3.6.0+", -1, [0x66e03954, 0xdae9f570], 2],
         ["YodasProtector", "1.0b", -1, 0x1303a51b, 2],
         ["ASM Guard", "2.XX+", -1, 0xf1e0d63b, 2], // https://github.com/DosX-dev/ASM-Guard
         ["Themida", "2.XX-3.XX", 0, 0x3ffccc8a, 2],
@@ -2210,7 +2441,8 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["CrypToCrack", "0.9.X", 0, 0x8b28bb4e, 2],
         ["DBPE", null, 0, [0x301ad755, 0x33406ae3], 2],
         ["Virbox", null, 0, 0xe6eb008d, 2], // https://lm-global.virbox.com/detail/virboxProtector.html
-        ["Quick Batch File Compiler", null, -1, 0x347060fa, 2] // https://www.abyssmedia.com/quickbfc/
+        ["Quick Batch File Compiler", null, -1, 0x347060fa, 2], // https://www.abyssmedia.com/quickbfc/
+        ["CodeVeil", null, 0, 0xd2c88a9c, 2]
     ];
 
     const importValidatingResult = validateImportHashes(dbCollectionOfHashesDict);
@@ -2245,6 +2477,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["Themida", "3.XX", [".imports", ".loadcon", ".themida", ".winlice"]],
         ["Themida", null, [".stub01", "WinLicen", ".v-lizer", "Themida "]],
         ["PEBundle", null, /^(PEB|peb)undle$/], // https://bitsum.com/pebundle.htm
+        ["DZA Patcher", null, "yoda"],
         ["UPX", null, /^UPX[0-3]$/], // https://github.com/upx/upx
         ["VMProtect", null, /^\.vmp[0-3]$/], // https://vmpsoft.com/
         [".NET Reactor", "2.XX", ".reacto"], // https://www.eziriz.com/dotnet_reactor.htm
@@ -2261,15 +2494,15 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["Crinkler", null, "lz32.dll"],
         ["Crunch", "2.0", "BitArts"],
         ["CrypToCrack", null, ".ccp3p"],
-        ["DxPack", "1.0", "coderpub"],
+        ["DxPack", "1.0", ["coderpub", ".reloc1"]],
         ["Enigma", null, /^\.enigma[12]$/], // https://enigmaprotector.com/
-        ["AHpacker", null, "!EPack"],
+        ["EXE Pack", null, "!EPack"],
         ["Eronana", null, ".packer"], // https://github.com/Eronana/packer
         ["FishPE Shield", null, ".FishPE"],
         ["FishPE", null, ".FISHEP"],
         ["G!X Protector", null, ".g!x"],
         ["JDPack", null, ".jdpack"],
-        ["Krypton", null, "YADO"],
+        ["Krypton", null, ["krypton", "YADO", "_!_!_!_"]],
         ["MEW", null, "MEW"],
         ["MPRESS", null, /^\.MPRESS[12]$/], // https://www.autohotkey.com/mpress/mpress_web.htm
         ["MaskPE", null, ".MaskPE"],
@@ -2293,7 +2526,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["SVK Protector", null, ["SVKP", /\.svkp( )?/]],
         ["SafeNet", null, /^\.AKS[1-3]$/],
         ["Safengine Shielden", null, ".sedat"],
-        ["SecuROM", null, /^\.cms_[dt]$/, ".securom", ".dsstext"], // https://en.wikipedia.org/wiki/SecuROM
+        ["SecuROM", null, [/^\.cms_[dt]$/, ".securom", ".dsstext"]], // https://en.wikipedia.org/wiki/SecuROM
         ["Shrinker", null, ".shrink1"],
         ["Simple Pack", null, ".spack"],
         ["Software Compress", null, "SoftComp"],
@@ -2345,7 +2578,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["Alcatraz", null, ".0Dev"],
         ["Squishy", null, "logicoma"],
         ["BattlEye", null, /^\.be[0-2]$/], // https://www.battleye.com/ (VMProtect-based)
-        ["DragonArmor", "0.0.4.1", "DAStub"],
+        ["DragonArmor", "0.0.4.1", /^(\.)?DAStub$/],
         ["EXECrypt", "1.0", "CRPT"],
         ["N-Code", "0.2", [".pepsi", "n-coded", ".vrs"]],
         ["NoodleCrypt", "2.X", [".Ncryo  ", ".De-vir "]],
@@ -2363,7 +2596,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["SDProtector", null, ".data "],
         ["Shielden", null, ".sedata"],
         ["SimbiOZ", null, ".ximera"],
-        ["SoftSentry", null, ["_stext", ".prdata"]],
+        ["SoftSentry", null, [/^_(stext|rdata|data|idata|rsrc|reloc)$/, ".prdata"]],
         ["PE Lock Phantasm", "1.X", "DINGBOY"], // https://www.arteam.accessroot.com/download39d1.html
         ["LARP", "2.X", "SnD "],
         ["DalKrypt", "1.X", ".DalKiT"],
@@ -2372,27 +2605,40 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         ["Xenocode Postbuild", null, ".xcpad"],
         ["XComp", null, /^\.XComp(0)?$/], // http://www.soft-lab.de/JoKo/
         ["XVolkolak", null, ".xvlk"], // unpacker & reconstructor
-        ["NetShield", null, "!Sugar"] // https://github.com/AdvDebug/NetShield_Protector
+        ["NetShield", null, "!Sugar"], // https://github.com/AdvDebug/NetShield_Protector
+        ["KeySec", null, ".ksec"],
+        ["Lumy", null, ".lumy"],
+        ["TomatoX", null, ".tomato"],
+        ["PwdProtect", null, ".pwdprot"],
+        ["ID Application", null, /^\.Prt(1)?$/],
+        ["PETetris", null, "PETETRIS"],
+        ["Fatpack", null, ".fpack  "]
     ];
 
     const sectionNamesValidatingResult = validateSectionNames(dbCollectionOfSectionNamesDict.concat(
-        [
-            ["fake Enigma", null, /^(\.)?enigma$/i],
-            ["fake UPX", null, [/^\.upx/i, /^upx/]],
-            ["fake VMProtect", null, /^(\.)?vmp$/i],
-            ["fake MPRESS", null, /^mpress/i],
-            ["fake Denuvo", null, /denuvo/i],
-            ["fake Themida", null, ".Themida"]
-        ]
+        (function () {
+            var dbCollectionOfFakeSectionNamesDict = [
+                ["Enigma", /^(\.)?enigma$/i],
+                ["UPX", [/^\.upx/i, /^upx/]],
+                ["VMProtect", /^(\.)?vmp$/i],
+                ["MPRESS", /^mpress/i],
+                ["Denuvo", /denuvo/i],
+                ["Themida", ".Themida"]
+            ];
+
+            return dbCollectionOfFakeSectionNamesDict.map(function (entry) {
+                return ["fake " + entry[0], null, entry[1]];
+            });
+        })()
     ).concat(
         [
-            ["a packer", null, [/p(a)?ck|sh(e)?ll|exe|^.pe/i, /^PE/]],
-            ["a cryptor", null, /crypt|crpt|stub|enc|inj/i, /stb/],
+            ["a packer", null, [/p(a)?ck|sh(e)?ll|exe|^\.pe/i, /^PE/]],
+            ["a cryptor", null, [/crypt|crpt|stub|enc|inj/i, /stb/]],
             ["a protector", null, [/prot|safe|lock|sec|virt|obf|guard|sh(ie)?ld/i, /DRM|drm/]]
         ]
     ));
 
-    var versionBySectionDetected;
+    var versionBySectionDetected = String();
 
     if (sectionNamesValidatingResult != null) {
         versionBySectionDetected = sectionNamesValidatingResult[1];
@@ -2406,6 +2652,46 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
     dbCollectionOfSectionNamesDict = undefined;
 
     if (isSectionNameLikePacker) options = addOption(options, "Sections like " + sectionNamesValidatingResult[0] + (versionBySectionDetected ? " (v" + sectionNamesValidatingResult[1] + ")" : String()));
+
+
+
+
+    // Check for packers and protections by resource names
+
+    var isResourceNameLikePacker = false;
+
+    // [{Name}, {Version}, {ResourceNameSignature}]
+
+    var dbCollectionOfResourceNamesDict = [
+        ["Bat To Exe Converter", null, /^(?=[0-9A-F]{40}$)(?=.*[0-9])(?=.*[A-F])[0-9A-F]{40}$/],
+        ["Fatpack", null, "FPACK"],
+        ["Quick Batch File Compiler", null, "PLATFORMTARGETS"],
+        ["ScriptCryptor", null, "AOPT"],
+        ["ExeStealth", null, "TN"],
+        [".NET Reactor", null, "__"],
+        ["SoftEntry", null, "SENTRYABORTDLG"],
+        ["ASM Guard", null, "ASMG.DLL"],
+        ["UPX Protector", null, "SCAREBYTE"],
+        ["Vbs To Exe", null, "B"],
+        ["QQProtect", null, "QQPROTECT"]
+    ];
+
+    const resourceNamesValidatingResult = validateResourceNames(dbCollectionOfResourceNamesDict);
+
+    var versionByResourceDetected = String();
+
+    if (resourceNamesValidatingResult != null) {
+        versionByResourceDetected = resourceNamesValidatingResult[1];
+
+        log(logType.nothing, "Resources like " + resourceNamesValidatingResult[0] + (versionByResourceDetected ? " (v" + versionByResourceDetected + ")" : String()));
+
+        isResourceNameLikePacker = true;
+    }
+
+    // Clean up: release the dictionary
+    dbCollectionOfResourceNamesDict = undefined;
+
+    if (isResourceNameLikePacker) options = addOption(options, "Resources like " + resourceNamesValidatingResult[0] + (versionByResourceDetected ? " (v" + versionByResourceDetected + ")" : String()));
 
 
 
@@ -2439,7 +2725,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
         var sectionName = PE.getSectionName(i);
         sectionNamesDict[sectionName] = (sectionNamesDict[sectionName] || 0) + 1;
         if (sectionNamesDict[sectionName] > 1) {
-            log(logType.nothing, "Section names repeating: '" + clearSectionName(sectionName) + "'");
+            log(logType.nothing, "Section names repeating: \"" + clearSectionName(sectionName) + "\"");
 
             isSectionNamesRepeatingPresent = true;
         }
@@ -2675,7 +2961,7 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
             if (importValidatingResult[1]) {
                 version = importValidatingResult[1];
-            } else if (isSectionNameLikePacker && !/^(a |fake )$/.test(sectionNamesValidatingResult[0])) {
+            } else if (isSectionNameLikePacker && !/^(a [pc]|fake )$/.test(sectionNamesValidatingResult[0])) {
                 if (importValidatingResult[0] === sectionNamesValidatingResult[0]) { // is same result
                     if (sectionNamesValidatingResult[1]) {
                         version = sectionNamesValidatingResult[1];
@@ -2706,6 +2992,8 @@ function scanForPackersAndCryptors_NET_and_Native() { // For .NET and Native app
 
 
 function scanForLicensingSystems_NET_and_Native() { // For .NET and Native apps
+    log(logType.nothing, "Scanning for licensing systems...");
+
     var options = String();
 
     var isDetected = Boolean();
@@ -2717,7 +3005,7 @@ function scanForLicensingSystems_NET_and_Native() { // For .NET and Native apps
 
         var isLicenseCheckingPresent = false;
 
-        if (PE.isNetObjectPresent("CheckLicense") || PE.isNetObjectPresent("set_License") || PE.isNetObjectPresent("Licensing")) {
+        if (validateNetObject("CheckLicense") || validateNetObject("set_License") || validateNetObject("Licensing")) {
             isLicenseCheckingPresent = true;
         }
 
@@ -2730,7 +3018,7 @@ function scanForLicensingSystems_NET_and_Native() { // For .NET and Native apps
 
         var isLicenseProviderPresent = false;
 
-        if (PE.isNetObjectPresent("LicenseProviderAttribute")) {
+        if (validateNetObject("LicenseProviderAttribute")) {
             isLicenseProviderPresent = true;
         }
 
@@ -2743,7 +3031,7 @@ function scanForLicensingSystems_NET_and_Native() { // For .NET and Native apps
 
         var isLicenseManagerPresent = false;
 
-        if (PE.isNetObjectPresent("LicenseManager")) {
+        if (validateNetObject("LicenseManager")) {
             isLicenseManagerPresent = true;
         }
 
@@ -2797,6 +3085,8 @@ function scanForLicensingSystems_NET_and_Native() { // For .NET and Native apps
 
 
 function scanForBadFileFormat_NET_and_Native() {
+    log(logType.nothing, "Scanning for corrupted data...");
+
     var options = String();
 
     var isDetected = Boolean();
@@ -2962,11 +3252,11 @@ function scanForDebugData_NET_and_Native() { // For .NET and Native apps
     for (var i = 0; i < PE.getNumberOfSections() && !isDebugSectionPresent; i++) {
         debugSectionIndex = i;
 
-        const currentSectionName = PE.getSectionName(i).toLowerCase();
+        const currentSectionName = PE.getSectionName(i);
 
-        if (currentSectionName.indexOf("debug") !== -1 || // Modern LLVM debug sections
-            currentSectionName === ".stab" || currentSectionName === ".stabstr") { // TCC/GCC
+        if (/(debug|^\.stab(str)?$)/i.test(currentSectionName)) { // Detects TCC/GCC and modern LLVM debug sections
             log(logType.any, "Debug section detected: \"" + clearSectionName(PE.getSectionName(debugSectionIndex)) + "\"");
+
             isDebugSectionPresent = true;
         }
     }
@@ -3010,9 +3300,14 @@ function scanForDebugData_NET_and_Native() { // For .NET and Native apps
 
     var isPdbFullPathPresent = false;
 
-    var pdbExtensionPatternOffset = PE.findSignature(PE.getDosStubOffset() + PE.getDosStubSize(), PE.getSize() - PE.getOverlaySize(), "'.pdb' 00");
+    var pdbExtensionPatternOffset = PE.findSignature(
+        PE.getDosStubOffset() + PE.getDosStubSize(),
+        PE.getSize() - PE.getOverlaySize(),
+        "%% %% %% '.pdb' 00"
+    );
 
-    var pdbPathBeginOffset, pdbPath = String();
+    var pdbPathBeginOffset = 0,
+        pdbPath = String();
 
     if (pdbExtensionPatternOffset !== -1) {
 
@@ -3028,7 +3323,7 @@ function scanForDebugData_NET_and_Native() { // For .NET and Native apps
         if (pdbPath.length > 255)
             pdbPath = pdbPath.substring(0, 255) + " . . .";
 
-        pdbPath = pdbPath.replace(/[\n\r]/g, "");
+        pdbPath = pdbPath.replace(/[\n\r]/g, String());
 
         if (pdbPath.match(/^[a-zA-Z]:\\/) !== null) {
             log(logType.any, "PDB absolute path: \"" + pdbPath + "\"");
@@ -3065,7 +3360,7 @@ function scanForDebugData_NET_and_Native() { // For .NET and Native apps
 
     var isCosturaEmbeddedDebugData = false;
 
-    if (PE.isNet() && PE.isNetObjectPresent("costura.costura.pdb.compressed")) {
+    if (PE.isNet() && validateNetObject("costura.costura.pdb.compressed")) {
         log(logType.any, "Costura embedded PDB detected");
 
         isCosturaEmbeddedDebugData = true;
@@ -3091,8 +3386,20 @@ function scanForDebugData_NET_and_Native() { // For .NET and Native apps
  *
  * @returns {boolean} True if the Microsoft.VisualBasic library is found; otherwise false.
  */
-function isVbNetstandardLibraryPresent() {
+function isVbNetStandardLibraryPresent() {
     return PE.isNetObjectPresent("Microsoft.VisualBasic");
+}
+
+
+
+
+/**
+ * Checks if the .NET JScript standard library is present.
+ *
+ * @returns {boolean} True if the Microsoft.JScript library is found; otherwise false.
+ */
+function isJscriptNetStandardLibraryPresent() {
+    return PE.isNetObjectPresent("Microsoft.JScript");
 }
 
 
@@ -3138,6 +3445,7 @@ function validateSignature(pattern) {
         lastOffsetDetected = "0x" + Number(offsetFound).toString(16);
         log(logType.any, "Pattern found: " + pattern);
     }
+
     return resultBool;
 }
 
@@ -3163,13 +3471,14 @@ function validateNetByteCode(byteCode) {
             return true;
         }
     }
+
     return false;
 }
 
 
 
 /**
- * Validates if the given object is a .NET object.
+ * Validates if the given .NET object is present in the PE file.
  *
  * @param {Object} object - The object to be validated.
  * @returns {boolean} - Returns true if the object is a .NET object, otherwise false.
@@ -3402,6 +3711,8 @@ function isTokenObfuscated(token) {
 
 
 function scanForObfuscations_Native() {
+    log(logType.nothing, "Scanning for obfuscation...");
+
     var options = String();
 
     var isDetected = Boolean();
@@ -3484,7 +3795,7 @@ function scanForObfuscations_Native() {
         // Iterate through messages to check for custom DOS
         for (var d in messages) {
             if (isCustomDosPresent) {
-                if (PE.findSignature(PE.getDosStubOffset(), PE.getDosStubSize(), "'" + messages[d] + "'") != -1) {
+                if (PE.isSignaturePresent(PE.getDosStubOffset(), PE.getDosStubSize(), "'" + messages[d] + "'")) {
                     isCustomDosPresent = false;
                 }
             }
@@ -3559,10 +3870,8 @@ function scanForObfuscations_Native() {
 
     var exeAsDll = false;
 
-    if (PE.isDll() && (
-        PE.isExportFunctionPresent("Start") ||
-        PE.isExportFunctionPresent("main") ||
-        PE.isExportFunctionPresent("_start"))) {
+    if (PE.isDll() &&
+        PE.isExportFunctionPresentExp(/^(Start|main|_start|(w)?WinMain|EntryPoint)$/)) {
         exeAsDll = true;
     }
 
@@ -3819,7 +4128,7 @@ function scanForObfuscations_Native() {
     var isNopPaddingPresent = false;
 
     // Condition to check for NOP padding
-    if (!isStartsWithNop && getEpAsmPattern(onlyOpCodes = true, numberOf = 5).indexOf(getInstructionsAsmPattern(["NOP", "NOP"])) !== -1) {
+    if (!isStartsWithNop && getEpAsmPattern(true, 5).indexOf(getInstructionsAsmPattern(["NOP", "NOP"])) !== -1) {
         isNopPaddingPresent = true;
     }
 
@@ -3836,9 +4145,9 @@ function scanForObfuscations_Native() {
 
     const
         SECTION_FLAGS_EXECUTE = 0x20000000, // IMAGE_SCN_MEM_EXECUTE
-        SECTION_FLAGS_READ = 0x40000000, // IMAGE_SCN_MEM_READ
-        SECTION_FLAGS_WRITE = 0x80000000, // IMAGE_SCN_MEM_WRITE
-        SECTION_FLAGS_CODE = 0x00000020; // IMAGE_SCN_CNT_CODE
+        SECTION_FLAGS_READ = 0x40000000,    // IMAGE_SCN_MEM_READ
+        SECTION_FLAGS_WRITE = 0x80000000,   // IMAGE_SCN_MEM_WRITE
+        SECTION_FLAGS_CODE = 0x00000020;    // IMAGE_SCN_CNT_CODE
 
     const
         RWX_MASK = SECTION_FLAGS_EXECUTE | SECTION_FLAGS_READ | SECTION_FLAGS_WRITE,
@@ -3926,7 +4235,7 @@ function scanForObfuscations_Native() {
 
     var isUnusedExceptionSectionPresent = false;
 
-    if (PE.isSectionNamePresent(".pdata") || PE.isSectionNamePresent(".xdata")) {
+    if (PE.isSectionNamePresentExp(/^\.[xp]data$/)) {
 
         // Offset of the exception directory (12 is the number of IMAGE_DIRECTORY_ENTRY_ entries, 8 is the size of each entry)
         var exceptionDirOffset = getOptHeaderOffset() + (PE.is64() ? 0x88 : 0x78);
@@ -4342,7 +4651,7 @@ function getNameOfMangledItem(itemPattern) {
                     // Global operator (single character)
                     if (nameWithPrefix.length === 1 && /[0-9A-D]/.test(nameWithPrefix[0])) {
                         var operatorNames = {
-                            '2': 'operator_new', '3': 'operator_delete', '4': 'operator_assign',
+                            '2': 'operator_new', '3': 'operator_delete', '4': 'operator_assigтгn',
                             '5': 'operator_shift_left', '6': 'operator_shift_right', '8': 'operator_equal',
                             '9': 'operator_not_equal', 'A': 'operator_subscript', 'B': 'operator_not',
                             'C': 'operator_cast', 'D': 'operator_cast_const'
@@ -4615,6 +4924,34 @@ function validateSectionNames(dbCollection) {
 
 
 /**
+ * Validates resource names within a database collection against known PE resource names or regular expressions.
+ * Iterates through the collection and checks if any resource signature matches a known resource name or passes a regular expression test.
+ *
+ * @param {Array} dbCollection - The database collection to validate, where each item is expected to have a resource signature at index 2.
+ * @returns {Array|null} The first matching item from the collection, or null if no match is found.
+ */
+function validateResourceNames(dbCollection) {
+    for (var i = 0; i < dbCollection.length; i++) {
+        var resourceSignature = dbCollection[i][2];
+        if (Array.isArray(resourceSignature)) {
+            for (var j = 0; j < resourceSignature.length; j++) {
+                if ((typeof resourceSignature[j] === "string" && PE.isResourceNamePresent(resourceSignature[j])) ||
+                    (resourceSignature[j] instanceof RegExp && PE.isResourceNamePresentExp(resourceSignature[j]))) {
+                    return dbCollection[i];
+                }
+            }
+        } else if ((typeof resourceSignature === "string" && PE.isResourceNamePresent(resourceSignature)) ||
+            (resourceSignature instanceof RegExp && PE.isResourceNamePresentExp(resourceSignature))) {
+            return dbCollection[i];
+        }
+    }
+
+    return null;
+}
+
+
+
+/**
  * Calculates and returns the offset of the PE optional header within the file.
  * 
  * The function reads the e_lfanew field at offset 0x3C to find the PE header start,
@@ -4694,8 +5031,8 @@ function isLinkerDetected() {
 
 
 
-function scanForLanguages_NET_and_Native() {
-    log(logType.nothing, "Scanning to programming language has started!");
+function scanForLanguagesAndCompilers_NET_and_Native() {
+    log(logType.nothing, "Scanning for programming language...");
 
     var c_cpp = _isLangPresent("C/C++"); // Unknown; C or C++
 
@@ -4879,11 +5216,15 @@ function scanForLanguages_NET_and_Native() {
         minorLinkerVersion = PE.getMinorLinkerVersion();
 
     if (!isCompilerDetected() && !isLinkerDetected() && !PE.isNet()) {
+        var ehFrameSection = PE.section[".eh_frame"],
+            buildIdSection = PE.section[".build-id"];
 
-        if (PE.isRichSignaturePresent() && (PE.compare("'MZ'90000300000004000000FFFF0000B800000000000000400000000000000000000000000000000000000000000000000000000000000000000000....00000E1FBA0E00B409CD21B8014CCD21'This program cannot be run in DOS mode.\r\r\n$'00000000") ||
+        if (!ehFrameSection && !buildIdSection && (
+            PE.isRichSignaturePresent() ||
+            PE.compare("'MZ'90000300000004000000FFFF0000B800000000000000400000000000000000000000000000000000000000000000000000000000000000000000....00000E1FBA0E00B409CD21B8014CCD21'This program cannot be run in DOS mode.\r\r\n$'00000000") ||
             PE.compare("'MZ'90000300000004000000FFFF0000B800000000000000400000000000000000000000000000000000000000000000000000000000000000000000....000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000") ||
-            PE.isSectionNamePresent(".00cfg"))) {
-
+            PE.isSectionNamePresent(".00cfg")
+        )) {
             if (PE.isSectionNamePresent(".gfids") || PE.isSectionNamePresent(".giats") || PE.isSectionNamePresent(".gljmp")) {
                 _setResult("~tool", "Microsoft Visual Studio", String(), String())
             }
@@ -4898,15 +5239,18 @@ function scanForLanguages_NET_and_Native() {
                     _setLangByHeur("C/C++");
                 }
             }
-        } else if (!PE.isRichSignaturePresent() && PE.isSectionNamePresent(".CRT") && PE.isSectionNamePresent(".rdata") && PE.isSectionNamePresent(".xdata") && PE.isSectionNamePresent(".idata") &&
-            (PE.isSectionNamePresent(".tls") || PE.isSectionNamePresent(".bss")) || PE.isSectionNamePresent(".buildid") || PE.isSectionNamePresent(".build-id")) {
+        } else if (
+            ehFrameSection || buildIdSection || (
+                PE.isSectionNamePresent(".CRT") && PE.isSectionNamePresent(".rdata") && PE.isSectionNamePresent(".xdata") && PE.isSectionNamePresent(".idata") &&
+                (PE.isSectionNamePresent(".tls") || PE.isSectionNamePresent(".bss")) || PE.isSectionNamePresent(".buildid")
+            )) {
 
             _setResult("~compiler", "MinGW", String(), String());
 
             if (!_isLangDetected() && isCLikeLibsNotFound) {
                 _setLangByHeur("C/C++");
             }
-        } else if (!PE.isRichSignaturePresent() && PE.isSectionNamePresent(".flat") && !isPpLibraryPresent) {
+        } else if (PE.isSectionNamePresent(".flat") && !isPpLibraryPresent) {
             _setResult("~compiler", "FASM", String(), String());
             _setLangByHeur("ASMx" + (PE.is64() ? "64" : "86"));
         }
@@ -4925,6 +5269,7 @@ function scanForLanguages_NET_and_Native() {
                 generateUnicodeSignatureMask("Visual C++"))) {
 
             log(logType.any, "Embedded Visual C++ Runtime detected.");
+
             isPpLibraryPresent = true; // Visual C++ Runtime library in resources
         }
     }
@@ -5021,7 +5366,7 @@ function log(messageTypeId, messageText) {
 
 
 function scanForMaliciousCode_NET_and_Native() {
-    log(logType.nothing, "Scanning to malicious code has started!");
+    log(logType.nothing, "Scanning for malicious code...");
 
     var verdicts = [];
 
@@ -5030,19 +5375,22 @@ function scanForMaliciousCode_NET_and_Native() {
 
     if (PE.isNet()) {
 
-        var requiredDotNetImports = ["System.Net.Sockets", "System.IO.Compression"],
-            allRequiredImportsFound = true,
+        var requiredDotNetImports = [
+            "System.Diagnostics",
+            "System.IO.Compression",
+            "user32", "kernel32", "ntdll" // no ext
+        ],
+            foundImportsCount = 0,
             importSignature, pattern, allPatternImportsFound;
 
         for (var i = 0; i < requiredDotNetImports.length; i++) {
             importSignature = "00'" + requiredDotNetImports[i] + "'00";
-            if (!PE.isSignatureInSectionPresent(0, importSignature)) {
-                allRequiredImportsFound = false;
-                break;
+            if (PE.isSignatureInSectionPresent(0, importSignature)) {
+                foundImportsCount++;
             }
         }
 
-        if (allRequiredImportsFound) {
+        if (PE.isSignatureInSectionPresent(0, "00'System.Net.Sockets'00") && foundImportsCount >= 2) {
             var maliciousImportPatterns = [
                 {
                     type: "NjRAT",
@@ -5151,6 +5499,16 @@ function scanForMaliciousCode_NET_and_Native() {
                         "user32", "GetWindowText"
                     ],
                     isVbNet: true
+                }, {
+                    type: "Webremote TorCT",
+                    edition: undefined,
+                    references: [
+                        "System.Windows.Forms",
+                        "avicap32.dll", "capGetDriverDescriptionA", "capCreateCaptureWindowA",
+                        "user32", "SendMessage", "SetWindowPos", "DestroyWindow",
+                        "user32.dll", "GetForegroundWindow", "GetWindowText"
+                    ],
+                    isVbNet: true
                 }, { // NjRAT Generic 1
                     type: "NjRAT",
                     edition: undefined,
@@ -5174,7 +5532,7 @@ function scanForMaliciousCode_NET_and_Native() {
                 pattern = maliciousImportPatterns[j];
                 allPatternImportsFound = true;
 
-                for (var k = 0; k < pattern.references.length && !allPatternImportsFound; k++) {
+                for (var k = 0; k < pattern.references.length && allPatternImportsFound; k++) {
                     importSignature = "00'" + pattern.references[k] + "'00";
                     if (!PE.isSignatureInSectionPresent(0, importSignature)) {
                         allPatternImportsFound = false;
@@ -5187,7 +5545,7 @@ function scanForMaliciousCode_NET_and_Native() {
                 }
 
                 // Check for VB.NET standard library references
-                if (pattern.isVbNet && !isVbNetstandardLibraryPresent()) {
+                if (pattern.isVbNet && !isVbNetStandardLibraryPresent()) {
                     continue;
                 }
 
@@ -5205,7 +5563,10 @@ function scanForMaliciousCode_NET_and_Native() {
         separatorToSearch = "??" + separatorToSearch.substring(2, separatorToSearch.length);
 
         // NjRAT Generic: Detect NjRAT via requests-separator or assembly name
-        if (verdicts.length === 0 && (PE.getNetAssemblyName() === "w" || PE.getNetModuleName() === "w.exe" || PE.isSignatureInSectionPresent(0, separatorToSearch))) {
+        if (verdicts.length === 0 && (
+            PE.getNetAssemblyName() === "w" || PE.getNetModuleName() === "w.exe" ||
+            PE.getNetAssemblyName() === "k" || PE.getNetModuleName() === "k.exe" ||
+            PE.isNetObjectPresent("njLogger") || PE.isNetUStringPresent("|PWD| ") || PE.isSignatureInSectionPresent(0, separatorToSearch))) {
             verdicts.push({
                 type: "NjRAT",
                 version: String(),
@@ -5223,7 +5584,12 @@ function scanForMaliciousCode_NET_and_Native() {
         }
 
 
-        if (verdicts.length === 0 && (PE.getNetAssemblyName() === "AsyncClient" || PE.getNetModuleName() === "AsyncClient.exe" || PE.isNetObjectPresent("Pastebin"))) {
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.asyncrat
+
+        if (verdicts.length === 0 && (
+            PE.getNetAssemblyName() === "AsyncClient" || PE.getNetModuleName() === "AsyncClient.exe" ||
+            PE.isNetObjectPresent("Pastebin")
+        )) {
             verdicts.push({
                 type: "AsyncRAT",
                 version: String(),
@@ -5231,6 +5597,8 @@ function scanForMaliciousCode_NET_and_Native() {
             });
         }
 
+
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.nanocore
 
         if (verdicts.length === 0 && (PE.isNetObjectPresent("ClientLoaderForm") || PE.getNetAssemblyName() === "NanoCore Client")) {
             verdicts.push({
@@ -5241,10 +5609,12 @@ function scanForMaliciousCode_NET_and_Native() {
         }
 
 
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.orcus_rat
+
         if (verdicts.length === 0 && (PE.getNetModuleName() === "Orcus.exe" || PE.isNetObjectPresent("Orcus.Connections"))) {
             verdicts.push({
                 type: "Orcus RAT",
-                version: String(),
+                version: "1.3-1.9.1",
                 details: String()
             });
         }
@@ -5259,9 +5629,62 @@ function scanForMaliciousCode_NET_and_Native() {
         }
 
 
+        if (verdicts.length === 0 && PE.isNetObjectPresent("button_unlock_Click")) {
+            verdicts.push({
+                type: "Liberium WinLocker",
+                version: String(),
+                details: String()
+            });
+        }
+
+
+        if (verdicts.length === 0 && PE.getNetModuleName() === "Kheir.exe") {
+            verdicts.push({
+                type: "jnRAT",
+                version: String(),
+                details: String()
+            });
+        }
+
+
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.darkrat
+
+        if (verdicts.length === 0 && (PE.getNetModuleName() === "Client.exe" && PE.isNetObjectPresent("fusion"))) {
+            verdicts.push({
+                type: "DarkRAT",
+                version: String(),
+                details: String()
+            });
+        }
+
+
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.icarus (??)
+
         if (verdicts.length === 0 && PE.isNetObjectPresent("tosuck")) {
             verdicts.push({
                 type: "ICARUS Evil Worm RAT",
+                version: String(),
+                details: String()
+            });
+        }
+
+
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.noneuclid_rat
+
+        if (verdicts.length === 0 && PE.isNetObjectPresent("isVM_by_wim_temper")) {
+            verdicts.push({
+                type: "NonEuclid RAT",
+                version: String(),
+                details: String()
+            });
+        }
+
+
+        // https://malpedia.caad.fkie.fraunhofer.de/details/win.imminent_monitor_rat
+
+        if (verdicts.length === 0 && PE.isNetObjectPresent("LZLoader") && PE.isNetObjectPresent("Injector")) {
+            verdicts.push({
+                type: "Imminent Monitor RAT",
                 version: String(),
                 details: String()
             });
@@ -5292,16 +5715,20 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.ramnit
+
     if (verdicts.length === 0 && PE.isSectionNamePresent(".rmnet")) {
         verdicts.push({
             type: "Ramnit",
             version: String(),
-            details: String()
+            details: "infected"
         });
     }
 
 
 
+
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.neshta
 
     if (verdicts.length === 0 && PE.compareEP(
         "55" +              // push ebp
@@ -5332,10 +5759,42 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
+    // https://citec.us/forum/showthread.php/15998-ConsoleDevil
+
     if (verdicts.length === 0 && PE.compareEP(
-        "B8 00 04 40 00" + // mov eax, 0x400400
-        "FF D0" +          // call eax
-        "6A 00"            // push 0
+        "68 .. .. .. .." +  // push [...]
+        "68 00 00 00 00" +  // push 0
+        "68 .. .. .. .." +  // push [...]
+        "E8 .. .. .. .." +  // call [...]
+        "83 C4 0C" +        // add esp, 0xc
+        "68 00 00 00 00"    // push 0
+    )) {
+        var consoleDevilVersion = String();
+
+        if (PE.isImportPositionHashPresent(0, 0xb27ceda0) && PE.isImportPositionHashPresent(1, 0xa77d975c)) {
+            consoleDevilVersion = "1.0";
+        } else if (PE.isImportPositionHashPresent(0, 0x1dec6c44) && PE.isImportPositionHashPresent(1, 0xf1ed6358)) {
+            consoleDevilVersion = "1.2";
+        }
+
+        if (consoleDevilVersion) {
+            verdicts.push({
+                type: "ConsoleDevil RAT",
+                version: consoleDevilVersion,
+                details: String()
+            });
+        }
+    }
+
+
+
+
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.poison_ivy
+
+    if (verdicts.length === 0 && PE.compareEP(
+        "B8 00 04 40 00" +  // mov eax, 0x400400
+        "FF D0" +           // call eax
+        "6A 00"             // push 0
     ) && PE.isImportPositionHashPresent(0, 0xbd365a2a)) {
         verdicts.push({
             type: "Poison Lvy RAT",
@@ -5346,6 +5805,8 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
+
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.ghost_rat
 
     if (verdicts.length === 0 && PE.isExportFunctionPresent("Ip")) {
         verdicts.push({
@@ -5358,7 +5819,9 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.darkcomet
+
+    if (verdicts.length === 0 &&
         // Todo fix
         /* (PE.isImportPositionHashPresent(0, 0xcf603a7d) && PE.isImportPositionHashPresent(1, 0xe6aa7d45) && PE.isImportPositionHashPresent(2, 0xa26edfd0)) || */
         // UPX packed
@@ -5376,12 +5839,15 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (PE.getNumberOfImports() === 1 && (
-        // stub.bin
-        PE.isImportPositionHashPresent(0, 0x202c6668) ||
-        // stub_tor.bin
-        PE.isImportPositionHashPresent(0, 0x249e9ed3)
-    )) {
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.bit_rat
+
+    if (verdicts.length === 0 &&
+        PE.getNumberOfImports() === 1 && (
+            // stub.bin
+            PE.isImportPositionHashPresent(0, 0x202c6668) ||
+            // stub_tor.bin
+            PE.isImportPositionHashPresent(0, 0x249e9ed3)
+        )) {
         verdicts.push({
             type: "BitRAT",
             version: String(),
@@ -5392,7 +5858,50 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if ((PE.getNumberOfImports() === 1 && PE.isImportPositionHashPresent(0, 0x06a04d16)) ||
+    if (verdicts.length === 0 &&
+        PE.getNumberOfImports() === 2 && // MPRESS packed
+        PE.isImportPositionHashPresent(0, 0x174efb84) &&
+        PE.isImportPositionHashPresent(1, 0x381488f1)
+    ) {
+        verdicts.push({
+            type: "Qatar RAT",
+            version: "1.2",
+            details: String()
+        });
+    }
+
+
+
+
+    if (verdicts.length === 0 &&
+        (PE.isImportPositionHashPresent(0, 0x991f7f9a) && PE.isImportPositionHashPresent(1, 0x3495fca1)) ||
+        (PE.isImportPositionHashPresent(0, 0x7d78c0f9) && PE.isImportPositionHashPresent(1, 0x4b76cb0f))) {
+        verdicts.push({
+            type: "Furax RAT",
+            version: String(),
+            details: String()
+        });
+    }
+
+
+
+
+    // https://malpedia.caad.fkie.fraunhofer.de/details/ps1.octopus
+
+    if (verdicts.length === 0 &&
+        (PE.isImportPositionHashPresent(0, 0x42600eef) && PE.isSignatureInSectionPresent(0, "'Octopus'"))) {
+        verdicts.push({
+            type: "Octopus RAT",
+            version: String(),
+            details: String()
+        });
+    }
+
+
+
+
+    if (verdicts.length === 0 &&
+        (PE.getNumberOfImports() === 1 && PE.isImportPositionHashPresent(0, 0x06a04d16)) ||
         (PE.getNumberOfImports() > 4 && PE.isImportPositionHashPresent(0, 0xa719918b) && PE.isImportPositionHashPresent(-1, 0x9f8ccfc6))
     ) {
         verdicts.push({
@@ -5405,7 +5914,22 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (PE.getNumberOfImports() === 1 && PE.isImportPositionHashPresent(0, 0x1b62aa20)) {
+    if (verdicts.length === 0 &&
+        PE.isImportPositionHashPresent(0, 0xb3318086) && // UPX packed
+        PE.isImportPositionHashPresent(1, 0x3d9a43d0) &&
+        PE.isImportPositionHashPresent(7, 0xf3b2674d)) {
+        verdicts.push({
+            type: "Smart RAT",
+            version: "1.0.X",
+            details: String()
+        });
+    }
+
+
+
+
+    if (verdicts.length === 0 &&
+        PE.getNumberOfImports() === 1 && PE.isImportPositionHashPresent(0, 0x1b62aa20)) {
         verdicts.push({
             type: "Ace RAT",
             version: "1.X",
@@ -5416,7 +5940,81 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (
+    if (verdicts.length === 0 &&
+        PE.getNumberOfImports() === 1 &&
+        PE.isRichSignaturePresent() &&
+        PE.isImportPositionHashPresent(0, 0x2d6f7e88)) {
+        verdicts.push({
+            type: "Aquates RAT",
+            version: "1.0",
+            details: String()
+        });
+    }
+
+
+
+
+    if (verdicts.length === 0 &&
+        PE.section[0].Name === "\uFFFD\uFFFD50") {
+        verdicts.push({
+            type: "Exception RAT",
+            version: "1.0",
+            details: String()
+        });
+    }
+
+
+
+
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.bozok
+
+    if (verdicts.length === 0 &&
+        !PE.isRichSignaturePresent() &&
+        PE.isImportPositionHashPresent(0, 0xbd365a2a)) { // kernel32.dll->ExitProcess
+        var bozokRatVersion = String();
+
+        if (PE.isImportPositionHashPresent(1, 0x0ed01f83)) {
+            bozokRatVersion = "1.0";
+        } else if (PE.isImportPositionHashPresent(1, 0xefd4be65)) {
+            bozokRatVersion = "1.2-1.3";
+        } else if (PE.isImportPositionHashPresent(1, 0x58133a50)) {
+            bozokRatVersion = "1.4-1.5.X";
+        }
+
+        if (bozokRatVersion) {
+            verdicts.push({
+                type: "Bozok RAT",
+                version: bozokRatVersion,
+                details: String()
+            });
+        }
+    }
+
+
+
+
+    if (verdicts.length === 0 && !PE.isRichSignaturePresent()) { // VB5
+        var aquaRatVersion = String();
+
+        if (PE.isImportPositionHashPresent(0, 0xfc2095af)) {
+            aquaRatVersion = "0.0.1";
+        } else if (PE.isImportPositionHashPresent(0, 0x8bc8445e)) {
+            aquaRatVersion = "0.2";
+        }
+
+        if (aquaRatVersion && PE.isSignatureInSectionPresent(0, "'Aqua'")) {
+            verdicts.push({
+                type: "Aqua RAT",
+                version: aquaRatVersion,
+                details: String()
+            });
+        }
+    }
+
+
+
+
+    if (verdicts.length === 0 &&
         (PE.isImportPositionHashPresent(0, 0x90648ec6) && PE.isImportPositionHashPresent(1, 0x199ccb02) && PE.isImportPositionHashPresent(2, 0x4bb25d37)) ||
         (PE.isImportPositionHashPresent(0, 0x41b27a00) && PE.isImportPositionHashPresent(1, 0x56a9aa44) && PE.isImportPositionHashPresent(2, 0x4bb25d37)) ||
         (PE.isImportPositionHashPresent(0, 0xc649d485) && PE.isImportPositionHashPresent(1, 0xf2e69b15) && PE.isImportPositionHashPresent(2, 0x4bb25d37)) ||
@@ -5435,7 +6033,8 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (PE.isImportPositionHashPresent(0, 0x519fb9a6) &&
+    if (verdicts.length === 0 &&
+        PE.isImportPositionHashPresent(0, 0x519fb9a6) &&
         PE.isImportPositionHashPresent(1, 0x69561fa8) &&
         PE.isImportPositionHashPresent(2, 0xe6aa7d45)) {
         verdicts.push({
@@ -5448,7 +6047,10 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (PE.isImportPositionHashPresent(1, 0x5d1bddcc)) {
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.netwire
+
+    if (verdicts.length === 0 &&
+        PE.isImportPositionHashPresent(1, 0x5d1bddcc)) {
         var netWireVersion = String();
 
         if (PE.isImportPositionHashPresent(0, 0xfa0dd025)) {
@@ -5469,13 +6071,33 @@ function scanForMaliciousCode_NET_and_Native() {
 
 
 
-    if (PE.isImportPositionHashPresent(0, 0xf25ba92f) &&
+    // https://malpedia.caad.fkie.fraunhofer.de/details/win.remcos
+
+    if (verdicts.length === 0 &&
+        PE.isImportPositionHashPresent(0, 0xf25ba92f) &&
         PE.isImportPositionHashPresent(1, 0xf740ae08) &&
-        PE.isImportPositionHashPresent(2, 0xba3a1112)
-    ) {
+        PE.isImportPositionHashPresent(2, 0xba3a1112)) {
         verdicts.push({
             type: "Remcos RAT",
             version: String(),
+            details: String()
+        });
+    }
+
+
+
+
+    // https://web.archive.org/web/20090902161812/http://synsecurity.net/index.php?page=downloads
+
+    if (verdicts.length === 0 &&
+        !PE.isRichSignaturePresent() &&
+        PE.getNumberOfImports() === 31 &&
+        PE.isImportPositionHashPresent(0, 0xcf603a7d) &&
+        PE.isImportPositionHashPresent(-1, 0x0201b2be) &&
+        PE.isImportPositionHashPresent(-1, 0x3ca208f6)) {
+        verdicts.push({
+            type: "Syndrome RAT",
+            version: "4.3.X",
             details: String()
         });
     }
@@ -5518,14 +6140,15 @@ function scanForMaliciousCode_NET_and_Native() {
 
     // Check for obfuscated names and anomalous signs in .NET and native assemblies
 
-    if (
-        PE.isNet() && (
-            PE.getNetAssemblyName().toLowerCase() === "stub" ||
-            PE.getNetModuleName().toLowerCase().indexOf("stub.") === 0 ||
-            isNameObfuscated(PE.getNetAssemblyName()) ||
-            isNameObfuscated(PE.getNetModuleName()) ||
-            /(^tmp|\.tmp$)/.test(PE.getNetModuleName())
-        ) ||
+    if (PE.isNet() && (
+        PE.getNetAssemblyName().toLowerCase() === "stub" ||
+        PE.getNetModuleName().toLowerCase().indexOf("stub.") === 0 ||
+        PE.getNetAssemblyName().toLowerCase().indexOf("crypted") !== -1 ||
+        PE.getNetModuleName().toLowerCase().indexOf("crypted") !== -1 ||
+        isNameObfuscated(PE.getNetAssemblyName()) ||
+        isNameObfuscated(PE.getNetModuleName()) ||
+        /(^tmp|\.tmp$)/.test(PE.getNetModuleName())
+    ) ||
         PE.getVersionStringInfo("OriginalFilename").toLowerCase().indexOf("stub.") === 0 ||
         PE.getVersionStringInfo("InternalName").toLowerCase().indexOf("stub.") === 0 ||
         (function () {
@@ -5549,6 +6172,18 @@ function scanForMaliciousCode_NET_and_Native() {
     ) {
         verdicts.push({
             type: "Anomalous build info",
+            version: String(),
+            details: mayBeInfected
+        });
+    }
+
+
+
+
+    if (PE.isResourceNamePresentExp(/^STUB(\.EXE)?$/) ||
+        PE.isResourceNamePresentExp(/(PAYLOAD|SHELLCODE)/)) {
+        verdicts.push({
+            type: "Anomalous resources",
             version: String(),
             details: mayBeInfected
         });
